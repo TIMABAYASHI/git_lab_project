@@ -1,7 +1,7 @@
 /*
 Error: File to import not found or unreadable: variables.
-       Load path: /Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css
-        on line 6 of /Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css/app.scss
+       Load path: /Applications/MAMP/htdocs/gitlab_project/gitluv_project/public/css
+        on line 6 of /Applications/MAMP/htdocs/gitlab_project/gitluv_project/public/css/app.scss
 
 1: 
 2: // Fonts
@@ -14,7 +14,10 @@ Error: File to import not found or unreadable: variables.
 9: @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
 Backtrace:
-/Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css/app.scss:6
+
+/Applications/MAMP/htdocs/gitlab_project/gitluv_project/public/css/app.scss:6
+=======
+/Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css/app.scss:
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:44:in `import'
 /Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -51,4 +54,5 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: variables.\A        Load path: /Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css\A         on line 6 of /Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css/app.scss\A \A 1: \A 2: // Fonts\A 3: @import url(\"https://fonts.googleapis.com/css?family=Raleway:300,400,600\");\A 4: \A 5: // Variables\A 6: @import \"variables\";\A 7: \A 8: // Bootstrap\A 9: @import \"~bootstrap-sass/assets/stylesheets/bootstrap\";"; }
+
+  content: "Error: File to import not found or unreadable: variables.\A        Load path: /Applications/MAMP/htdocs/gitlab_project/gitluv_project/public/css\A         on line 6 of /Applications/MAMP/htdocs/gitlab_project/gitluv_project/public/css/app.scss\A \A 1: \A 2: // Fonts\A 3: @import url(\"https://fonts.googleapis.com/css?family=Raleway:300,400,600\");\A 4: \A 5: // Variables\A 6: @import \"variables\";\A 7: \A 8: // Bootstrap\A 9: @import \"~bootstrap-sass/assets/stylesheets/bootstrap\";"; }
