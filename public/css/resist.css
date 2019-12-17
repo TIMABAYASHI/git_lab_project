@@ -1,0 +1,78 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  color: #24bddc;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 20%;
+}
+
+h2 {
+  font-family: "Ubuntu", sans-serif;
+  padding-left: 7%;
+  padding-bottom: 2%;
+}
+
+.form-container {
+  background-color: #fff;
+  width: 90%;
+  height: 90%;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  padding-top: 30%;
+  padding-bottom: 30%;
+  margin: 10% auto;
+}
+
+.form {
+  font-family: "Ubuntu", sans-serif;
+  padding-top: 50px;
+}
+.form__input {
+  width: 76%;
+  color: rgba(38, 50, 56, 0.2);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  background: rgba(136, 126, 126, 0.04);
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  padding: 10px 20px;
+  margin-left: 46px;
+  margin-bottom: 27px;
+  margin-bottom: 10%;
+}
+.form__input:focus {
+  border: 2px solid rgba(0, 0, 0, 0.18);
+}
+.form__input:hover {
+  background: #bebebe;
+  border: 1px solid #bebebe;
+  color: #fff;
+}
+.form__input__btn {
+  cursor: pointer;
+  border-radius: 4em;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right, #24bddc, #76d9e8);
+  border: 0;
+  font-size: 1em;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  padding: 10px 40px;
+  margin-left: 35%;
+  margin-top: 7%;
+}
+.form__input__btn:hover {
+  color: #24bddc;
+  background: #fff;
+  border: 1px solid #24bddc;
+}
