@@ -34,8 +34,8 @@
             <li><i class="material-icons list--next" >looks_5</i></li>
         </ul> 
         <!-- </div> -->
-      <h1 class="title">デートプラン選択</h1>
-      <h2 class="question">どっちの気分？</h2>
+      <h1 class="title">どっちの気分？</h1>
+      <!-- <h2 class="question">どっちの気分？</h2> -->
       <form class="form" method="post" action="#">
         <button class="form__input" type="submit" name="feeling" value="0">
           アカデミック
