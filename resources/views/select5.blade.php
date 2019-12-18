@@ -38,7 +38,7 @@
       <h2 class="question">どっちの気分？</h2>
       <form class="form" method="post" action="#">
         <button class="form__input" type="submit" name="feeling" value="0">
-          新しいスポット!!
+          新しいスポット!
         </button>
         <button class="form__input" type="submit" name="feeling" value="1">
           歴史的な場所
