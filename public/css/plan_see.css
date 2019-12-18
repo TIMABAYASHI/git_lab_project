@@ -13,7 +13,7 @@
   margin-top: 20%;
 }
 
-.form-container img {
+.form-container-photo {
   width: 100%;
   height: 8%;
   text-align: center;
@@ -43,9 +43,9 @@
 
 .form-container-photo {
   width: 100%;
-  height: 100px;
+  height: 150px;
   background-color: brown;
-  background-image: url("../../resources/img/date1.jpg");
+  background-image: url("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2119.017552565542!2d139.70116603669882!3d35.659153900366896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b57efbd57c7%3A0x217e9d9fe306fba!2z5b-g54qs44OP44OB5YWs5YOP!5e0!3m2!1sja!2sjp!4v1576647952501!5m2!1sja!2sjp");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
