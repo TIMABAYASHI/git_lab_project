@@ -1,4 +1,5 @@
-// カラー ベースカラーはグレー、メインカラーはブルー,
+/*-------------- フォント、カラー ----------------*/
+// カラー: ベースカラーはグレー、メインカラーはブルー,
 $base-color1: gray;
 $base-color2: #bebebe;
 $base-color3: #ebebeb;
@@ -9,15 +10,14 @@ $main-color3: #c7f5f5;
 
 $white-color: #fff;
 
-// フォント jは日本語、eは英語
+// フォント: jは日本語、eは英語
 $font-j1: "Noto Serif JP", serif;
 $font-e1: "Ubuntu", sans-serif;
 $font-e2: "Mansalva", cursive;
 
-// mixin
-
-// 各ページの表題
-@mixin title {
+/*-------------- 表題 ----------------*/
+// 各ページの表題(select.bladeなど）
+@mixin title-1 {
   color: $main-color1;
   font-family: $font-e1;
   font-weight: bold;
@@ -25,20 +25,53 @@ $font-e2: "Mansalva", cursive;
   text-align: center;
 }
 
-// ログイン画面のemail,password入力フォーム
+/*-------------- レイアウト ----------------*/
+// 親要素に対して中央寄せ
+// *引数($dierction)に x, y, xy いずれかを与える(x：横方向中央寄せ y：縦方向中央寄せ xy：縦横方向中央寄せ)
+// *使用時には親要素にposition: rerativeをかける
+@mixin center($direction) {
+  position: absolute;
+  @if $direction==xy {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if $direction==x {
+    left: 50%;
+    transform: translateX(-50%);
+  } @else if $direction==y {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// 背景設定（画像など）
+// *最初に$PATH_IMGに画像のファイルまでのパスを設定
+// *引数($fileName)に画像のファイル名を与える
+@mixin background-image($fileName) {
+  $PATH_IMG: "../../resources/img/";
+  background-image: url($PATH_IMG+$fileName);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+/*-------------- フォーム ----------------*/
+// ログイン画面のemail,password入力窓
 @mixin input-1 {
+  &::placeholder {
+    color: $base-color2;
+  }
   width: 76%;
   color: rgb(38, 50, 56);
-  font-weight: 700;
+  font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
   background: rgba(136, 126, 126, 0.04);
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   outline: none;
   box-sizing: border-box;
   border: 2px solid rgba(0, 0, 0, 0.02);
-  text-align: center;
   padding: 10px 20px;
   margin-left: 46px;
   margin-bottom: 27px;
@@ -47,10 +80,23 @@ $font-e2: "Mansalva", cursive;
   }
 }
 
+// select.bladeなどのgoogle風の外枠（heightと余白はそれぞれ調整要）
+@mixin box-1 {
+  background-color: #fff;
+  width: 90%;
+  height: 90%;
+  border-radius: 1.5rem;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  padding-top: 30%;
+  padding-bottom: 30%;
+  margin: 10% auto;
+}
+
+/*-------------- ボタン ----------------*/
 // ログイン画面のログインボタン
 @mixin btn-1 {
   cursor: pointer;
-  border-radius: 5em;
+  border-radius: 4em;
   text-align: center;
   color: $white-color;
   background: linear-gradient(to right, $main-color1, $main-color2);
@@ -67,39 +113,24 @@ $font-e2: "Mansalva", cursive;
   }
 }
 
-// ＊ルール
-// BEM記法でクラス名を指定すること（Block__Element--Modifier)
-// BlockとElementの間は、アンスコ二つ
-// ElementとModifierの間は、ハイフン二つ
-// 単語間はハイフン一つ
-
-// @mixinはテンプレート
-// 使用する時は、@include mixin名;
-
-// @extendはすでに使った内容と同じスタイルを当てたい時
-// 使用する時は、@extend クラス名
-
-// &を書くことで、表記を省略できる
-
-// ＊以下表記例
-// @mixin margin1 {
-//   margin: 0 0 10% 10%;
-// }
-
-// $fontsize1: 16px;
-
-// .form {
-//   &__input {
-//     display: block;
-//     @include margin1;
-//   }
-//   &__btn {
-//     color: #fff;
-//     background-color: #bebebe;
-//     font-size: $fontsize1;
-//     &:hover {
-//       background-color: white;
-//       border: 1px solid #bebebe;
-//     }
-//   }
-// }
+// select.bladeなどの２択ボタン
+@mixin btn-2 {
+  display: block;
+  width: 60%;
+  height: 10%;
+  color: $base-color1;
+  background: #fff;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid $base-color1;
+  border-radius: 1.5rem;
+  transition: 0.5;
+  margin: 10% auto;
+  &:hover {
+    background: $main-color2;
+    border: 1px solid $main-color2;
+    color: #fff;
+  }
+}
