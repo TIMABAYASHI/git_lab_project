@@ -13,6 +13,13 @@
   margin-top: 20%;
 }
 
+.all__div {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  overflow-y: scroll;
+}
+
 .form-container-photo {
   width: 100%;
   height: 8%;
@@ -52,7 +59,7 @@
 }
 
 .plan1 {
-  margin: 8% 0 10% 10%;
+  margin: 4% 0 10% 10%;
   font-size: 18px;
 }
 .plan1__time {
@@ -80,15 +87,42 @@
   font-size: 34px;
 }
 
+.plan4 {
+  margin: 8% 0 10% 10%;
+  font-size: 18px;
+}
+.plan4__time {
+  font: "Ubuntu", sans-serif;
+  font-size: 34px;
+}
+
 .plan1__1,
 .plan2__1,
-.plan3__1 {
+.plan3__1,
+.plan4__1 {
   display: flex;
+}
+
+.date {
+  width: 20%;
+  height: 10%;
+  text-align: center;
+  margin: 7% 0 0 0;
+}
+.date__input {
+  font-size: medium;
+  font-family: "Ubuntu", sans-serif;
 }
 
 h3 {
   font-size: 16px;
   height: 20%;
+}
+
+.material-icons.arrow {
+  height: 30%;
+  margin-top: 5%;
+  margin-left: 1%;
 }
 
 .plan__btn__send {
@@ -102,14 +136,12 @@ h3 {
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
   padding: 10px 40px;
   margin-left: 35%;
-  margin: 10% 0 0 30%;
+  margin: 0 0 6% 30%;
+  position: absolute;
+  bottom: 0;
 }
 .plan__btn__send:hover {
   color: #24bddc;
   background: #fff;
   border: 1px solid #24bddc;
-}
-
-.material-icons.arrow {
-  height: 30%;
 }
