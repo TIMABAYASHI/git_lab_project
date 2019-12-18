@@ -12,7 +12,7 @@
       href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
     />
     <!-- Google mapの読みこみ -->
-    <script src="http://maps.google.com/maps/api/js?key=AIzaSyD74CM0lF1Nhh3DpGYjikYjToFLjq8Nwg8&libraries=places&language=ja"></script>
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyD74CM0lF1Nhh3DpGYjikYjToFLjq8Nwg8&libraries=places&language=ja"></script>
     <!-- Google fontsの読みこみ -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Arapey|Mansalva|Nothing+You+Could+Do|Noto+Serif+JP|Shadows+Into+Light|Ubuntu&display=swap" rel="stylesheet"/>
@@ -92,6 +92,10 @@ window.onload = function (){
       $("#plan_name2").attr("placeholder","東京ディズニーランド")
       $("#plan_name3").attr("placeholder","オールデイダイニング カリフォルニア")
       $("#plan_name4").attr("placeholder","表参道駅")
+      $("#plan_name1").attr("placeholder","舞浜駅")
+      $("#plan_name2").attr("placeholder","東京ディズニーランド")
+      $("#plan_name3").attr("placeholder","オールデイダイニング カリフォルニア")
+      $("#plan_name4").attr("placeholder","表参道駅")
     } if(num == 1){
       $("#plan_name1").attr("placeholder","上野駅")
       $("#plan_name2").attr("placeholder","上野動物園")
@@ -106,6 +110,7 @@ window.onload = function (){
       $("#plan_name1").attr("placeholder","自宅でゆっくり")
     } 
 }
+
 $("#search1").on("click",function(){
   console.log("ボタンを押したよ")
 })
@@ -143,83 +148,122 @@ getPlace();
 // let p1location = p1.value();
 // console.log(p1location);
 
-
 //入力１
 function getPlace(){
     var mapSearch = document.getElementById('plan_name1');
-    if(mapSearch.value){
+    var mapSearch2 = document.getElementById('plan_name2');
+    if(mapSearch.value && mapSearch2.value ){
         var service = new google.maps.places.PlacesService(map);
         var searchValue = mapSearch.value;
+        var searchValue2 = mapSearch2.value;
         var placeRequest = {
             query: searchValue, //入力したテキスト
         }
+        var placeRequest2 = {
+            query: searchValue2, //入力したテキスト
+        }
+        console.log(placeRequest,placeRequest2)
         // リクエストを送ってあげるとプライス情報を格納したオブジェクトを返してくれます。
-        service.textSearch(placeRequest,function(results,status){
-            var places = results[0];
-            toGeocode(places);
-            console.log(places);
-            
+        
+        // const promise = new Promise((resolve, reject) => {
+        //     const xhr = new XMLHttpRequest();
+        //     xhr.open('GET', 'foo.txt');
+        //     xhr.addEventListener('load', (e) => resolve(xhr.responseText));
+        //     xhr.send();
+        // });
+
+        // promise.then((response) => console.log(response));
+
+        const textSearch1 = new Promise((resolve, reject) => {
+          service.textSearch(placeRequest,(results,status) => {
+            console.log(results[0])
+            resolve(results[0]);
+          });
         });
+
+        const textSearch2 = new Promise((resolve, reject) => {
+          service.textSearch(placeRequest2,(results,status) => {
+            console.log(results[0])
+            resolve(results[0]);
+          });
+        });
+
+        // service.textSearch(placeRequest,(results,status) => {
+        //     var places = results[0];
+        //     console.log(results[0]);
+        // });
+        // service.textSearch(placeRequest2,function(results,status){
+        //     var places2 = results[0];     
+        //     console.log(places2);
+        // });
+      
+        textSearch1.then((response) => {
+          console.log(`これがレスポンス`, response)
+          var places = response
+
+          textSearch2.then((response1) => {
+            console.log(`これがレスポンス2`, response1)
+            var places2 = response1
+            toGeocode(places,places2);
+          })
+        });
+
+       
+        // console.log(places);
+        // console.log(places2);
+        // toGeocode(places,places2);
     } 
 };
 
-//入力２
-// function getPlace(){
-//     var mapSearch2 = document.getElementById('plan_name2');
-//     if(mapSearch2.value){
-//         var service2 = new google.maps.places.PlacesService(map);
-//         var searchValue2 = mapSearch2.value;
-//         var placeRequest2 = {
-//             query: searchValue2, //入力したテキスト
-//         }
-//         // リクエストを送ってあげるとプライス情報を格納したオブジェクトを返してくれます。
-//         service2.textSearch(placeRequest2,function(results,status){
-//             var places2 = results[0];
-//             toGeocode(places2);
-//         });
-//     } 
-// };
-// console.log(places2);
-
-// var latlng2 = new google.maps.LatLng(places2.geometry.location.lat(),places2.geometry.location.lng());
-// console.log(latlng2);
-
 var request = {};
-function toGeocode(places){
-    //取得したplacesオブジェクトから緯度と経度をgeocodeとして渡します。
-    var latlng = new google.maps.LatLng(places.geometry.location.lat(),places.geometry.location.lng());
+var latlng = {};
 
-    //ルート取得
-    console.log(places.geometry.location.lat());
-    console.log(places.geometry.location.lng());
-    getRoute(latlng);
-     
- request = {
-        origin: latlng, //入力地点の緯度、経度
-        destination: (35.6811673, 139.7670516), //到着地点の緯度、経度
-        travelMode: google.maps.DirectionsTravelMode.WALKING //ルートの種類
-    }
-    console.log(request);
-}    
-console.log(request);
-console.log(latlng);
+function toGeocode (places,places2){
+      latlng = new google.maps.LatLng(places.geometry.location.lat(),places.geometry.location.lng());
+      latlng2 = new google.maps.LatLng(places2.geometry.location.lat(),places2.geometry.location.lng());
+      //ルート取得
+      console.log(places.geometry.location.lat());
+      console.log(places.geometry.location.lng());
+      console.log(latlng);
+      getRoute(latlng, latlng2);
 
-//ルート描画用
-function getRoute(latlng){
-    var request = {
+      request = {
         origin: latlng, //入力地点の緯度、経度
-        destination: (35.6811673, 139.7670516), //到着地点の緯度、経度
+        destination: latlng2, //到着地点の緯度、経度
         travelMode: google.maps.DirectionsTravelMode.WALKING //ルートの種類
-    }
-    directionsService.route(request,function(result, status){
-        toRender(result);
-    });
+      }
+      console.log(request);
+}
+function getRoute(latlng,latlng2){
+  var request = {
+    origin: latlng, //入力地点の緯度、経度
+    destination: latlng2, //到着地点の緯度、経度
+    travelMode: google.maps.DirectionsTravelMode.WALKING //ルートの種類
+  }
+  console.log('ああああ');
+  directionsService.route(request,function(result, status){
+    console.log('dekow')
+    toRender(result);
+  });
 }
 
+
+var fetchSomething1 = function (){
+    //取得したplacesオブジェクトから緯度と経度をgeocodeとして渡します。
+    return new Promise(function(resolve,reject){
+    
+});
+}
+// console.log(request);
+// console.log(latlng);
+
+//ルート描画用
+fetchSomething1().then();
+
 function toRender(result){
-    directionsDisplay = new google.maps.DirectionsRenderer();
-    directionsDisplay.setDirections(result); //取得した情報をset
-    directionsDisplay.setMap(map); //マップに描画
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  directionsDisplay.setDirections(result); //取得した情報をset
+  directionsDisplay.setMap(map); //マップに描画
 }
 
 
