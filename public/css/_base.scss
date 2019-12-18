@@ -19,7 +19,7 @@ $font-e2: "Mansalva", cursive;
   color: $main-color1;
   font-family: $font-e1;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -54,7 +54,7 @@ $font-e2: "Mansalva", cursive;
 }
 
 /*-------------- フォーム ----------------*/
-// ログイン画面のemail,password入力窓
+// ログイン画面に搭載のemail,password入力窓
 @mixin input-1 {
   &::placeholder {
     color: $base-color2;
@@ -78,20 +78,19 @@ $font-e2: "Mansalva", cursive;
   }
 }
 
-// select.bladeなどのgoogle風の外枠（heightと余白はそれぞれ調整要）
+// select.bladeなどに搭載のgoogle風の外枠（heightと余白はそれぞれ調整要）
 @mixin box-1 {
   background-color: #fff;
   width: 90%;
-  height: 90%;
   border-radius: 1.5rem;
   box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-  padding-top: 30%;
-  padding-bottom: 30%;
+  padding-top: 15%;
+  padding-bottom: 15%;
   margin: 10% auto;
 }
 
 /*-------------- ボタン ----------------*/
-// ログイン画面のログインボタン
+// ログイン画面に搭載のログインボタン
 @mixin btn-1 {
   cursor: pointer;
   border-radius: 4em;
@@ -102,8 +101,10 @@ $font-e2: "Mansalva", cursive;
   font-size: 1em;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
   //   transition: all 0.3s;
+  display: block;
+  width: 40%;
   padding: 10px 40px;
-  margin-left: 35%;
+  margin: 0 auto;
   &:hover {
     color: $main-color1;
     background: $white-color;
@@ -111,7 +112,7 @@ $font-e2: "Mansalva", cursive;
   }
 }
 
-// select.bladeなどの２択ボタン
+// select.bladeなどに搭載の２択ボタン
 @mixin btn-2 {
   display: block;
   width: 60%;
@@ -121,7 +122,6 @@ $font-e2: "Mansalva", cursive;
   text-align: center;
   line-height: 3rem;
   font-size: 1rem;
-  cursor: pointer;
   border: 1px solid $base-color1;
   border-radius: 1.5rem;
   transition: 0.5;
@@ -131,4 +131,16 @@ $font-e2: "Mansalva", cursive;
     border: 1px solid $main-color2;
     color: #fff;
   }
+}
+/*-------------- その他 ----------------*/
+// login.bladeなどに搭載のポリシー等の記述
+@mixin policy {
+  width: 70%;
+  background: $base-color3;
+  color: $base-color1;
+  font-family: $font-j1;
+  line-height: 1.25rem;
+  font-size: 0.8rem;
+  padding: 5%;
+  margin: 15% auto auto;
 }
