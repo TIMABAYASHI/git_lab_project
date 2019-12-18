@@ -1,0 +1,115 @@
+@charset "UTF-8";
+/*-------------- フォント、カラー ----------------*/
+/*-------------- 表題 ----------------*/
+/*-------------- レイアウト ----------------*/
+/*-------------- フォーム ----------------*/
+/*-------------- ボタン ----------------*/
+.title {
+  color: #24bddc;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.form-container img {
+  width: 100%;
+  height: 8%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #bebebe;
+}
+
+.plan__edit {
+  width: 80%;
+  height: 3%;
+  display: flex;
+  margin: 10% 0 5% 9%;
+  border-bottom: solid 1px;
+}
+
+.plan__title__h2 {
+  font-family: "Ubuntu", sans-serif;
+  width: 22%;
+  padding: 3%;
+}
+
+.plan__title {
+  width: 68%;
+  font-size: 20px;
+  margin-left: 3%;
+}
+
+.form-container-photo {
+  width: 100%;
+  height: 100px;
+  background-color: brown;
+  background-image: url("../../resources/img/date1.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.plan1 {
+  margin: 8% 0 10% 10%;
+  font-size: 18px;
+}
+.plan1__time {
+  font: "Ubuntu", sans-serif;
+  font-size: 34px;
+}
+
+.plan2 {
+  margin: 8% 0 10% 10%;
+  font-size: 18px;
+}
+.plan2__time {
+  font: "Ubuntu", sans-serif;
+  font-size: 34px;
+  width: 22%;
+  height: 10%;
+}
+
+.plan3 {
+  margin: 8% 0 10% 10%;
+  font-size: 18px;
+}
+.plan3__time {
+  font: "Ubuntu", sans-serif;
+  font-size: 34px;
+}
+
+.plan1__1,
+.plan2__1,
+.plan3__1 {
+  display: flex;
+}
+
+h3 {
+  font-size: 16px;
+  height: 20%;
+}
+
+.plan__btn__send {
+  cursor: pointer;
+  border-radius: 4em;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right, #24bddc, #76d9e8);
+  border: 0;
+  font-size: 1em;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  padding: 10px 40px;
+  margin-left: 35%;
+  margin: 10% 0 0 30%;
+}
+.plan__btn__send:hover {
+  color: #24bddc;
+  background: #fff;
+  border: 1px solid #24bddc;
+}
+
+.material-icons.arrow {
+  height: 30%;
+}

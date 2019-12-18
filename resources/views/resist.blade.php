@@ -20,7 +20,7 @@
 
 <body>
 <h1 class="title">会員情報詳細入力</h1>
-<form class="form">
+<form class="form" action=".php" method="POST">
     <h2 class="form__title">名前 :</h2>
         <input
           class="form__input"
