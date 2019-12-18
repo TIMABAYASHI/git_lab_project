@@ -27,9 +27,9 @@
     <div class="form-container">
       <!-- <div class="counter"> -->
         <ul class=list>
-            <li><i class="material-icons list--now" >looks_one</i></li>
+            <li><i class="material-icons list--next" >looks_one</i></li>
             <li><i class="material-icons list--next" >looks_two</i></li>
-            <li><i class="material-icons list--next" >looks_3</i></li>
+            <li><i class="material-icons list--now" >looks_3</i></li>
             <li><i class="material-icons list--next" >looks_4</i></li>
             <li><i class="material-icons list--next" >looks_5</i></li>
         </ul> 
@@ -38,10 +38,10 @@
       <h2 class="question">どっちの気分？</h2>
       <form class="form" method="post" action="#">
         <button class="form__input" type="submit" name="feeling" value="0">
-          落ち着くところでチル
+          和食で決まり！
         </button>
         <button class="form__input" type="submit" name="feeling" value="1">
-          アクティブに動きたい！
+          洋食がいい！
         </button>
         <!-- <input class="form__btn" type="submit" value="Send" /> -->
       </form>
