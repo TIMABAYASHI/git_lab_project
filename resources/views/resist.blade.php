@@ -21,21 +21,21 @@
 <body>
 <h1 class="title">会員情報詳細入力</h1>
 <form class="form">
-    <h2>名前 :</h2>
+    <h2 class="form__title">名前 :</h2>
         <input
           class="form__input"
           type="text"
           name="user_name"
           placeholder="リーチ・マイケル"
         />
-    <h2>生年月日 :</h2>
+    <h2 class="form__title">生年月日 :</h2>
         <input
           class="form__input"
           type="password"
           name="birthday"
           placeholder=""
         />
-    <h2>郵便番号 :</h2>
+    <h2 class="form__title">郵便番号 :</h2>
         <input
             class="form__input"
             type="text" 
@@ -44,7 +44,7 @@
             value="" 
             onKeyUp="AjaxZip3.zip2addr('zip', '', 'address', 'address');" 
         /><br>
-    <h2>住所：</h2>
+    <h2 class="form__title">住所：</h2>
         <input
             class="form__input"
             type="text" 
@@ -58,7 +58,7 @@
           name="address"
           placeholder=""
         /> -->
-    <h2>血液型 :</h2>
+    <h2 class="form__title">血液型 :</h2>
         <input
           class="form__input"
           type="text"

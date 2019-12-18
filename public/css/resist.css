@@ -12,12 +12,6 @@ body {
   margin-top: 20%;
 }
 
-h2 {
-  font-family: "Ubuntu", sans-serif;
-  padding-left: 7%;
-  padding-bottom: 2%;
-}
-
 .form-container {
   background-color: #fff;
   width: 90%;
@@ -33,10 +27,15 @@ h2 {
   font-family: "Ubuntu", sans-serif;
   padding-top: 50px;
 }
+.form__title {
+  font-family: "Ubuntu", sans-serif;
+  padding-left: 7%;
+  padding-bottom: 2%;
+}
 .form__input {
   width: 76%;
-  color: rgba(38, 50, 56, 0.2);
-  font-weight: 700;
+  color: #263238;
+  font-weight: 500;
   font-size: 14px;
   letter-spacing: 1px;
   background: rgba(136, 126, 126, 0.04);
@@ -53,6 +52,9 @@ h2 {
 .form__input:focus {
   border: 2px solid rgba(0, 0, 0, 0.18);
 }
+.form__input::placeholder {
+  color: #bebebe;
+}
 .form__input:hover {
   background: #bebebe;
   border: 1px solid #bebebe;
@@ -67,6 +69,7 @@ h2 {
   border: 0;
   font-size: 1em;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s;
   padding: 10px 40px;
   margin-left: 35%;
   margin-top: 7%;
