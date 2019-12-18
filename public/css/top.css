@@ -1,4 +1,9 @@
 /*Base*/
+body {
+  width: 100%;
+  height: 100%;
+}
+
 /*Base*/
 .title {
   width: 80%;
