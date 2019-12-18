@@ -26,8 +26,8 @@ cursive;
 // ログイン画面のemail,password入力フォーム
 @mixin input-1 {
     width: 76%;
-    color: rgba(38, 50, 56, 0.2);
-    font-weight: 700;
+    color: rgb(38, 50, 56);
+    font-weight: 500;
     font-size: 14px;
     letter-spacing: 1px;
     background: rgba(136, 126, 126, 0.04);
@@ -43,6 +43,9 @@ cursive;
     &:focus {
         border: 2px solid rgba(0, 0, 0, 0.18);
     }
+    &::placeholder {
+        color: $base-color2;
+    }
 }
 
 // ログイン画面のログインボタン
@@ -55,7 +58,7 @@ cursive;
     border: 0;
     font-size: 1em;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-    //   transition: all 0.3s;
+    transition: all 0.3s;
     padding: 10px 40px;
     margin-left: 35%;
     &:hover {

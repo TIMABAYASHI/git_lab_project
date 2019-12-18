@@ -10,12 +10,6 @@ body {
     margin-top: 20%;
 }
 
-h2 {
-    font-family: $font-e1;
-    padding-left: 7%;
-    padding-bottom: 2%;
-}
-
 .form-container {
     background-color: #fff;
     width: 90%;
@@ -30,6 +24,11 @@ h2 {
 .form {
     font-family: $font-e1;
     padding-top: 50px;
+    &__title {
+        font-family: $font-e1;
+        padding-left: 7%;
+        padding-bottom: 2%;
+    }
     &__input {
         @include input-1;
         // display: block;
