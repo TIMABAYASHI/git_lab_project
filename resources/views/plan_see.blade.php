@@ -30,7 +30,7 @@
       <h1 class="title">プラン編集</h1>
     </div>
     <div class="plan__edit">
-    <h2 class="plan__title__h2">プラン名</h2>
+    <h2 class="plan__title__h2" id="plan_edit">プラン名</h2>
     <input class="plan__title" type="text" name="title" value="">
     </div>
   
@@ -47,8 +47,8 @@
     <div class="plan1">
     <div class="plan1__1">
       <input class="plan1__time__input" id="plan1_input" type="time" name="time" value="time">
-      <input class="plan1__name" id="plan_name1"  placeholder="渋谷ハチ公前" value="渋谷">
-      <button type="submit" id="mapButton"><i class="material-icons search">search</i></button>
+      <input class="plan1__name" id="plan_name1"  placeholder="" value="渋谷ハチ公前">
+      <button type="submit" id="mapButton1"><i class="material-icons search">search</i></button>
       </div>
       <div class="plan1__2">
       <i class="material-icons arrow">arrow_downward</i>
@@ -58,24 +58,28 @@
     <div class="plan2">
     <div class="plan2__1">
       <input class="plan2__time__input" id="plan2_input" type="time" name="time" value="">
-      <input class="plan2__name" id="plan_name2"  placeholder="渋谷キューズ" value="横浜">
-      </div>
-
+      <input class="plan2__name" id="plan_name2"  placeholder="" value="渋谷キューズ">
+      <button type="submit" id="mapButton2"><i class="material-icons search">search</i></button>  
+    </div>
+    <button type="submit" id="route1">経路検索</button>  
       <i class="material-icons arrow">arrow_downward</i>
       <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2546.2844507280543!2d139.70120916665005!3d35.659259029466334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x387c407b91e2ad68!2z5riL6LC344K544OI44Oq44O844Og!5e0!3m2!1sja!2sjp!4v1576648011338!5m2!1sja!2sjp" width="80%" height="100px" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
     </div>
     <div class="plan3">
       <div class="plan3__1">
         <input class="plan3__time__input" id="plan3_input"  type="time" name="time" value="">
-        <input class="plan3__name" id="plan_name3" placeholder="道玄坂上">
+        <input class="plan3__name" id="plan_name3" placeholder="" value="道玄坂上">
+        <button type="submit" id="mapButton3"><i class="material-icons search">search</i></button>
       </div>
+      <i class="material-icons arrow">arrow_downward</i>
       <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1643.487476051775!2d139.70281100152394!3d35.65921445624524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5850e5a83f%3A0x70297507b32efce5!2z5riL6LC344OS44Kr44Oq44Ko!5e0!3m2!1sja!2sjp!4v1576646652586!5m2!1sja!2sjp" width="80%" height="100px" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
     </div>
     <div class="plan4">
       <div class="plan4__1">
         <input class="plan4__time__input" id="plan4_input"  type="time" name="time" value="">
-        <input class="plan4__name" id="plan_name4" placeholder="渋谷駅"></input>
+        <input class="plan4__name" id="plan_name4" placeholder="" value="渋谷駅"></input>
       </div>
+      <button type="submit" id="mapButton4"><i class="material-icons search">search</i></button>
       <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1643.487476051775!2d139.70281100152394!3d35.65921445624524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5850e5a83f%3A0x70297507b32efce5!2z5riL6LC344OS44Kr44Oq44Ko!5e0!3m2!1sja!2sjp!4v1576646652586!5m2!1sja!2sjp" width="80%" height="100px" frameborder="0" style="border:0;" allowfullscreen=""></iframe> -->
     </div>
     
@@ -84,36 +88,83 @@
 </div>
 
 <script>
+  // $("#plan_edit").on("click",function(){
 window.onload = function (){
   let num = Math.floor( Math.random() * 3 );
   console.log(num);
+     let func = function(){ 
       if(num == 0){
-      $("#plan_name1").attr("placeholder","舞浜駅")
-      $("#plan_name2").attr("placeholder","東京ディズニーランド")
-      $("#plan_name3").attr("placeholder","オールデイダイニング カリフォルニア")
-      $("#plan_name4").attr("placeholder","表参道駅")
-      $("#plan_name1").attr("placeholder","舞浜駅")
-      $("#plan_name2").attr("placeholder","東京ディズニーランド")
-      $("#plan_name3").attr("placeholder","オールデイダイニング カリフォルニア")
-      $("#plan_name4").attr("placeholder","表参道駅")
+      $("#plan_name1").val("舞浜駅")
+      $("#plan_name2").val("東京ディズニーランド")
+      $("#plan_name3").val("オールデイダイニング カリフォルニア")
+      $("#plan_name4").val("表参道駅")
+      // $("#plan_name1").attr("placeholder","舞浜駅")
+      // $("#plan_name2").attr("placeholder","東京ディズニーランド")
+      // $("#plan_name3").attr("placeholder","オールデイダイニング カリフォルニア")
+      // $("#plan_name4").attr("placeholder","表参道駅")
+     
     } if(num == 1){
-      $("#plan_name1").attr("placeholder","上野駅")
-      $("#plan_name2").attr("placeholder","上野動物園")
-      $("#plan_name3").attr("placeholder","アメヤ横丁")
-      $("#plan_name4").attr("placeholder","モリキュール")
+      $("#plan_name1").val("上野駅")
+      $("#plan_name2").val("上野動物園")
+      $("#plan_name3").val("アメヤ横丁")
+      $("#plan_name4").val("モリキュール")
+      // $("#plan_name1").attr("placeholder","上野駅")
+      // $("#plan_name2").attr("placeholder","上野動物園")
+      // $("#plan_name3").attr("placeholder","アメヤ横丁")
+      // $("#plan_name4").attr("placeholder","モリキュール")
+      
     } if(num == 2){
-      $("#plan_name1").attr("placeholder","渋谷ヒカリエ")
-      $("#plan_name2").attr("placeholder","渋谷パルコ")
-      $("#plan_name3").attr("placeholder","グリーングリル 渋谷店")
-      $("#plan_name4").attr("placeholder","渋谷スクランブルスクエア")
+      $("#plan_name1").val("渋谷ヒカリエ")
+      $("#plan_name2").val("渋谷パルコ")
+      $("#plan_name3").val("グリーングリル 渋谷店")
+      $("#plan_name4").val("渋谷スクランブルスクエア")
+      // $("#plan_name1").attr("placeholder","渋谷ヒカリエ")
+      // $("#plan_name2").attr("placeholder","渋谷パルコ")
+      // $("#plan_name3").attr("placeholder","グリーングリル 渋谷店")
+      // $("#plan_name4").attr("placeholder","渋谷スクランブルスクエア")
     } if(num == 3){
       $("#plan_name1").attr("placeholder","自宅でゆっくり")
     } 
+  }
 }
+// setTimeout(,2000)
+    var btn1 = $('#plan_name1').val();
+    var btn2 = $('#plan_name2').val();
+    var btn3 = $('#plan_name3').val();
+    var btn4 = $('#plan_name4').val();
+    console.log(btn1);
+    console.log(btn2);
+    console.log(btn3);
+    console.log(btn4);
 
-$("#search1").on("click",function(){
+$("#mapButton1").on("click",function(){
   console.log("ボタンを押したよ")
 })
+
+//valueが取れるか確認
+$("#mapButton1").on("click",function(){
+  $('#plan_name1').val("秋葉原駅");
+  console.log($('#plan_name1').val())
+})
+$("#mapButton2").on("click",function(){
+  $('#plan_name2').val("東京駅");
+  console.log($('#plan_name2').val())
+})
+
+//地点検索
+
+// ボタンに指定したid要素を取得
+// var button = document.getElementById("button");
+
+// ボタンが押された時の処理
+// button.onclick = function() {
+//   // フォームに入力された住所情報を取得
+//   var address = document.getElementById("address").value;
+//   // 取得した住所を引数に指定してcodeAddress()関数を実行
+//   codeAddress(address);
+// }
+
+
     // var MyLatLng = new google.maps.LatLng(35.6811673, 139.7670516);
     // var Options = {
     //   zoom: 13,             //地図の縮尺値
@@ -129,7 +180,7 @@ var directionsDisplay;
 
 //オプション設定
 var myOptions = {
-    zoom: 17,
+    zoom: 10,
     center: new google.maps.LatLng(35.7102849, 139.77714030000004),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     scaleControl: true,
@@ -138,15 +189,6 @@ var myOptions = {
 //マップを描画
 var map = new google.maps.Map(mapdiv, myOptions);
 getPlace();
-
-// let p1 = document.getElementById('plan_name1');
-// let p2 = document.getElementById('plan_name2');
-// let p3 = document.getElementById('plan_name3');
-// let p4 = document.getElementById('plan_name4');
-// let p5 = document.getElementById('plan_name5');
-
-// let p1location = p1.value();
-// console.log(p1location);
 
 //入力１
 function getPlace(){
