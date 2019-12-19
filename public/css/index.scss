@@ -12,9 +12,7 @@
 
 // ログイン画面の写真
 .container {
-  height: 736px;
-  display: flex;
-  align-items: center;
+  @include container(812px);
   @include background-image("date6.jpg");
 }
 

@@ -27,7 +27,12 @@ body {
   margin-top: 10%;
 }
 
-.form-container {
+.container {
+  height: 750px;
+  display: flex;
+  align-items: center;
+}
+.container .form-container {
   background-color: #fff;
   width: 90%;
   border-radius: 1.5rem;

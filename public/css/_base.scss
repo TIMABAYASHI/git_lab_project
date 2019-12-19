@@ -26,7 +26,7 @@ $font-e2: "Mansalva", cursive;
 /*-------------- レイアウト ----------------*/
 // 親要素に対して中央寄せ
 // *引数($dierction)に x, y, xy いずれかを与える(x：横方向中央寄せ y：縦方向中央寄せ xy：縦横方向中央寄せ)
-// *使用時には親要素にposition: rerativeをかける
+// *使用時には親要素にposition: relativeをかける
 @mixin center($direction) {
   position: absolute;
   @if $direction==xy {
@@ -42,9 +42,18 @@ $font-e2: "Mansalva", cursive;
   }
 }
 
+// 縦中央寄せにしたい要素の親（container)に対して当てる
+// $heightにcontainerで出したい高さを入れる。
+@mixin container($height) {
+  height: $height;
+  display: flex;
+  align-items: center;
+}
+
 // 背景設定（画像など）
 // *最初に$PATH_IMGに画像のファイルまでのパスを設定
 // *引数($fileName)に画像のファイル名を与える
+// ＊mixinを当てる要素のサイズを指定すること
 @mixin background-image($fileName) {
   $PATH_IMG: "../../resources/img/";
   background-image: url($PATH_IMG+$fileName);
@@ -95,7 +104,7 @@ $font-e2: "Mansalva", cursive;
   cursor: pointer;
   border-radius: 4em;
   text-align: center;
-  color: $white-color;
+  color: #fff;
   background: linear-gradient(to right, $main-color1, $main-color2);
   border: 0;
   font-size: 1em;

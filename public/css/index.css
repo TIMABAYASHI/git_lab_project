@@ -15,7 +15,7 @@
 }
 
 .container, .container2 {
-  height: 736px;
+  height: 812px;
   display: flex;
   align-items: center;
   background-image: url("../../resources/img/date6.jpg");
