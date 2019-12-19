@@ -12,6 +12,7 @@
 */
 
 
+
 // ページをどう飛ばすのか
 // 1.トップページ
 Route::get('/', function () {
@@ -67,3 +68,6 @@ Route::get('/search', function () {
 // Route::get('/', function () {
 //     return view('');
 // });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
