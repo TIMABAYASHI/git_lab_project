@@ -328,7 +328,7 @@ var getMap = (function() {
 getMap.getAddress();
 
 
-//入力１
+//入力１ルート検索
 function getPlace(){
     var mapSearch = document.getElementById('plan_name1');
     var mapSearch2 = document.getElementById('plan_name2');

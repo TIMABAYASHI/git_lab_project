@@ -24,7 +24,8 @@
     <link rel="stylesheet" href="../../public/css/reset.css" />
     <link rel="stylesheet" href="../../public/css/board.css" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-</head>
+    
+  </head>
 
 <body>
 <div class="title">
@@ -36,8 +37,14 @@
 <div class="post__table">
   <table>
     <tr>
-      <td class="post__title__1" >プラン名：</td>
-      <td class="post__title__2" name="name">渋谷AR体験デートプラン<?=$title?></td>
+      <div class="date__table">
+        <td class="post__date__1" >投稿日：</td>
+        <td class="post__date__2" >2019/12/24</td>
+      </div>
+    </tr>
+    <tr class="name__table">
+        <td class="post__title__1" >プラン名：</td>
+        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">渋谷AR体験デートプラン<?=$title?></a></td>
       <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
     </tr>
     <tr>
@@ -45,7 +52,41 @@
       <td><input type="text" name="comment" required></td> <!--コメント入力フォーム作成-->
     </tr>
       <td colspan="2" align="center">
-      <input type="submit" value="送信"> <!--送信ボタン作成-->
+      
+      <div class="sns_box" id="fb-root" >
+      <input class="send__btn" type="submit" value="投稿する"> 
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size="small"><img src="../img/Twitter_Logo_Blue.png"></a>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script>
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="15px" data-layout="button" data-action="like" data-size="small" data-share="true">
+      </div>
+    </tr>
+  </table>
+</div>
+<div class="post__table">
+  <table>
+    <tr>
+      <div class="date__table">
+        <td class="post__date__1" >投稿日：</td>
+        <td class="post__date__2" >2019/12/24</td>
+      </div>
+    </tr>
+    <tr class="name__table">
+        <td class="post__title__1" >プラン名：</td>
+        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">ミッキーとふれあいプラン<?=$title?></a></td>
+      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
+    </tr>
+    <tr>
+      <td>コメント:</td>
+      <td><input type="text" name="comment" required></td> <!--コメント入力フォーム作成-->
+    </tr>
+      <td colspan="2" align="center">
+      
+      <div class="sns_box" id="fb-root" >
+      <input class="send__btn" type="submit" value="投稿する"> 
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size="small"><img src="../img/Twitter_Logo_Blue.png"></a>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script>
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="15px" data-layout="button" data-action="like" data-size="small" data-share="true">
+      </div>
     </tr>
   </table>
 </div>

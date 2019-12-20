@@ -164,19 +164,33 @@ h3 {
     margin: 0 auto;
 }
 
-.plan__btn__send {
-    @include btn-1;
-    background-color: darkorange;
-    width: 55%;
-    margin: 0 20% 6% 23%;
-    position: fixed;
-    bottom: 0;
+.plan__btn {
+    &__send {
+        @include btn-1;
+        background-color: darkorange;
+        width: 55%;
+        margin: 0 20% 6% 23%;
+        // position: fixed;
+        // bottom: 0;
+    }
+    &__back {
+        @include btn-2;
+        background-color: rgb(255, 207, 148);
+    }
 }
 
-.bottom {
-    width: 100%;
-    height: 9%;
-    background-color: white;
-    position: fixed;
-    bottom: 0px;
-}
+// .plan__btn__send {
+//     @include btn-1;
+//     background-color: darkorange;
+//     width: 55%;
+//     margin: 0 20% 6% 23%;
+//     position: fixed;
+//     bottom: 0;
+// }
+// .bottom {
+//     width: 100%;
+//     height: 15%;
+//     background-color: white;
+//     position: fixed;
+//     bottom: 0px;
+// }

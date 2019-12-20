@@ -74,10 +74,10 @@
 <div class="form-container">
       <h1 class="title">プラン確認</h1>
     </div>
-    <form action=".php" method="POST">
+    <!-- <form action=".php" method="POST"> -->
     <div class="plan__edit">
     <h2 class="plan__title__h2" id="plan_edit">プラン名</h2>
-    <input class="plan__title" type="text" name="title" value="">
+    <p class="plan__title" type="text" name="title" value=""><?=$name?></p>
     </div>
   
   <div class="all__div">
@@ -86,8 +86,8 @@
     </div>
     <div class="plan1">
     <div class="plan1__1">
-      <input class="plan1__time__input" id="plan1_input" type="time" name="time" value="<?$name?>">
-      <input class="plan1__name" id="plan_name1"  placeholder="" value="">
+      <input class="plan1__time__input" id="plan1_input" type="time" name="time" value="<?$time?>">
+      <p class="plan1__name" id="plan_name1"  placeholder="" value=""><?=$place?></input>
       
       </div>
       <div class="plan1__2">
@@ -97,8 +97,8 @@
     </div>
     <div class="plan2">
     <div class="plan2__1">
-      <input class="plan2__time__input" id="plan2_input" type="time" name="time" value="">
-      <input class="plan2__name" id="plan_name2"  placeholder="" value="">
+      <input class="plan2__time__input" id="plan2_input" type="time" name="time" value="<?=$time?>">
+      <p class="plan2__name" id="plan_name2"  placeholder="" value=""><?=$place?></p>
       
     </div>  
       <i class="material-icons arrow">arrow_downward</i>
@@ -106,8 +106,8 @@
     </div>
     <div class="plan3">
       <div class="plan3__1">
-        <input class="plan3__time__input" id="plan3_input"  type="time" name="time" value="">
-        <input class="plan3__name" id="plan_name3" placeholder="" value="">
+        <input class="plan3__time__input" id="plan3_input"  type="time" name="time" value="<?=$time?>">
+        <p class="plan3__name" id="plan_name3" placeholder="" value=""><?=$place?></p>
         
       </div>
       <i class="material-icons arrow">arrow_downward</i>
