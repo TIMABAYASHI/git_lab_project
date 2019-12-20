@@ -34,25 +34,25 @@ cursive;
 }
 
 .plan__edit {
-    width: 85%;
+    width: 80%;
     height: 3%;
     display: flex;
-    margin: 10% 0 5% 7%;
+    margin: 10% 0 5% 9%;
     border-bottom: solid 1px;
 }
 
 .plan__title__h2 {
     font-family: $font-e1;
-    width: 26%;
-    padding: 1%;
+    width: 27%;
+    padding: 3%;
     // border-bottom: solid 1px black;
 }
 
 .plan__title {
-    width: 70%;
+    width: 68%;
     // height: 10%;
     font-size: 20px;
-    padding-bottom: 0%;
+    margin-left: 1%;
 }
 
 // 背景設定（画像など）
@@ -166,6 +166,7 @@ h3 {
 
 .plan__btn__send {
     @include btn-1;
+    background-color: darkorange;
     width: 55%;
     margin: 0 20% 6% 23%;
     position: fixed;
