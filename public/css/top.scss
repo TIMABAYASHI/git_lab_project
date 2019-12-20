@@ -40,7 +40,17 @@ cursive;
 }
 
 .login {
+    @include btn-1;
     width: 50%;
     height: 25%;
-    color: #2487ff;
+    margin-top: 20%;
+    // color: #2487ff;
+}
+
+.resist {
+    @include btn-2;
+    width: 50%;
+    height: 25%;
+    margin-top: 20%;
+    // color: #2487ff;
 }

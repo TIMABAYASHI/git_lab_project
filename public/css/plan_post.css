@@ -30,23 +30,23 @@
 }
 
 .plan__edit {
-  width: 85%;
+  width: 80%;
   height: 3%;
   display: flex;
-  margin: 10% 0 5% 7%;
+  margin: 10% 0 5% 9%;
   border-bottom: solid 1px;
 }
 
 .plan__title__h2 {
   font-family: "Ubuntu", sans-serif;
-  width: 26%;
-  padding: 1%;
+  width: 27%;
+  padding: 3%;
 }
 
 .plan__title {
-  width: 70%;
+  width: 68%;
   font-size: 20px;
-  padding-bottom: 0%;
+  margin-left: 1%;
 }
 
 .form-container-photo {
@@ -145,6 +145,7 @@ h3 {
   width: 40%;
   padding: 10px 40px;
   margin: 0 auto;
+  background-color: darkorange;
   width: 55%;
   margin: 0 20% 6% 23%;
   position: fixed;

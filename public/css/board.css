@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/*-------------- フォント、カラー ----------------*/
+/*-------------- 表題 ----------------*/
+/*-------------- レイアウト ----------------*/
+/*-------------- フォーム ----------------*/
+/*-------------- ボタン ----------------*/
+/*-------------- その他 ----------------*/
+body {
+  width: 100%;
+  height: 100%;
+  font: "Noto Serif JP", serif;
+}
+
+.title {
+  color: #24bddc;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 10% auto;
+}
+
+.post__table {
+  width: 100%;
+  height: 15%;
+  margin: 10% auto;
+  font-size: large;
+  border: solid 1px rgba(88, 88, 88, 0.6);
+}
+
+.post__title {
+  font: "Noto Serif JP", serif;
+  width: 60%;
+  margin-top: 2%;
+}
+
+.question {
+  text-align: center;
+  font-size: 1.2rem;
+  color: gray;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10%;
+}
