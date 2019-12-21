@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/*-------------- フォント、カラー ----------------*/
+/*-------------- 表題 ----------------*/
+/*-------------- レイアウト ----------------*/
+/*-------------- フォーム ----------------*/
+/*-------------- ボタン ----------------*/
+/*-------------- その他 ----------------*/
+.title {
+  color: #24bddc;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 20%;
+}
+
+.all__div {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.form-container-photo {
+  width: 100%;
+  height: 8%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #bebebe;
+}
+
+.plan__edit {
+  width: 80%;
+  height: 3%;
+  display: flex;
+  margin: 10% 0 5% 9%;
+  border-bottom: solid 1px;
+}
+
+.plan__title__h2 {
+  font-family: "Ubuntu", sans-serif;
+  width: 27%;
+  padding: 3%;
+}
+
+.plan__title {
+  width: 68%;
+  font-size: 20px;
+  margin-left: 1%;
+}
+
+.form-container-photo {
+  width: 100%;
+  height: 150px;
+  background-color: brown;
+  background-image: url("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2119.017552565542!2d139.70116603669882!3d35.659153900366896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b57efbd57c7%3A0x217e9d9fe306fba!2z5b-g54qs44OP44OB5YWs5YOP!5e0!3m2!1sja!2sjp!4v1576647952501!5m2!1sja!2sjp");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.plan1 {
+  margin: 0 0 10% 14%;
+  font-size: 18px;
+}
+.plan1__time {
+  font: "Ubuntu", sans-serif;
+  font-size: 34px;
+}
+
+.plan2,
+.plan3,
+.plan4,
+.plan5,
+.plan6 {
+  margin: 8% 0 10% 14%;
+  font-size: 18px;
+}
+.plan2__time,
+.plan3__time,
+.plan4__time,
+.plan5__time,
+.plan6__time {
+  font: "Ubuntu", sans-serif;
+  font-size: 34px;
+  width: 22%;
+  height: 10%;
+}
+
+.plan1__1,
+.plan2__1,
+.plan3__1,
+.plan4__1 {
+  display: flex;
+}
+
+.date {
+  width: 20%;
+  height: 6%;
+  text-align: center;
+  margin: 7% 0 0 0;
+}
+.date__input {
+  font-size: medium;
+  font-family: "Ubuntu", sans-serif;
+}
+
+h3 {
+  font-size: 16px;
+  height: 20%;
+}
+
+.material-icons.arrow {
+  height: 30%;
+  margin-top: 7%;
+  margin-left: 1%;
+}
+
+.material-icons.search {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.plan1__name,
+.plan2__name,
+.plan3__name,
+.plan4__name {
+  border: rgba(0, 0, 0, 0.7);
+}
+
+.open__box {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.plan__btn__send {
+  cursor: pointer;
+  border-radius: 4em;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right, #24bddc, #76d9e8);
+  border: 0;
+  font-size: 1em;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  display: block;
+  width: 40%;
+  padding: 10px 40px;
+  margin: 0 auto;
+  background-color: darkorange;
+  width: 55%;
+  margin: 0 20% 6% 23%;
+}
+.plan__btn__send:hover {
+  color: #24bddc;
+  background: #fff;
+  border: 1px solid #24bddc;
+}
+.plan__btn__back {
+  display: block;
+  width: 60%;
+  height: 10%;
+  color: gray;
+  background: #fff;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1rem;
+  border: 1px solid gray;
+  border-radius: 1.5rem;
+  transition: 0.5;
+  margin: 10% auto;
+  background-color: #ffcf94;
+}
+.plan__btn__back:hover {
+  background: #76d9e8;
+  border: 1px solid #76d9e8;
+  color: #fff;
+}

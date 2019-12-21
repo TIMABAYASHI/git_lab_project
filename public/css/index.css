@@ -4,33 +4,47 @@
 /*-------------- レイアウト ----------------*/
 /*-------------- フォーム ----------------*/
 /*-------------- ボタン ----------------*/
-body {
-  width: 100%;
-  height: 100%;
-}
-
-.title {
+/*-------------- その他 ----------------*/
+.title--login, .title--logout {
   color: #24bddc;
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   text-align: center;
+  font-size: 2rem;
+}
+
+.container, .container2 {
+  height: 812px;
+  display: flex;
+  align-items: center;
+  background-image: url("/img/date6.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.container2 {
+  background-image: url("/img/date5.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 }
 
 .form-container {
   background-color: #fff;
   width: 90%;
-  height: 90%;
-  padding-top: 30%;
-  padding-bottom: 30%;
-  margin: 10% auto;
-  border-radius: 1.5em;
+  border-radius: 1.5rem;
   box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  padding-top: 15%;
+  padding-bottom: 15%;
+  margin: 10% auto;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .form {
-  padding-top: 40px;
   font-family: "Ubuntu", sans-serif;
+  padding-top: 40px;
 }
 .form__input {
   width: 76%;
@@ -63,13 +77,23 @@ body {
   border: 0;
   font-size: 1em;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  display: block;
+  width: 40%;
   padding: 10px 40px;
-  margin-left: 35%;
+  margin: 0 auto;
 }
 .form__btn:hover {
   color: #24bddc;
   background: #fff;
   border: 1px solid #24bddc;
+}
+.form__btn--relogin {
+  width: 50%;
+}
+.form__btn--relogin a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
 }
 .form__remember {
   text-align: center;
@@ -78,11 +102,12 @@ body {
 }
 
 .policy {
-  width: 60%;
-  margin: 20% auto;
-  padding: 5%;
+  width: 70%;
   background: #ebebeb;
   color: gray;
   font-family: "Noto Serif JP", serif;
-  font-size: 0.9em;
+  line-height: 1.25rem;
+  font-size: 0.8rem;
+  padding: 5%;
+  margin: 15% auto auto;
 }

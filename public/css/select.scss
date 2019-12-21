@@ -19,9 +19,12 @@ body {
   margin-top: 10%;
 }
 
-.form-container {
-  @include box-1;
-  padding-top: 15%;
+.container {
+  @include container(750px);
+  .form-container {
+    @include box-1;
+    padding-top: 15%;
+  }
 }
 
 .form {

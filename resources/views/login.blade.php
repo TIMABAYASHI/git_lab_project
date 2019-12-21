@@ -19,37 +19,41 @@
       href="https://fonts.googleapis.com/css?family=Arapey|Mansalva|Nothing+You+Could+Do|Noto+Serif+JP|Shadows+Into+Light|Ubuntu&display=swap"
       rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link rel="stylesheet" href="../../public/css/reset.css" />
-    <link rel="stylesheet" href="../../public/css/index.css" />
-    <title>ログイン</title>
+    <link rel="stylesheet" href="{{asset('/css/reset.css')}}" />
+    <link rel="stylesheet" href="{{asset('/css/index.css')}}" />
+
+    <title>Login</title>
   </head>
 
   <body>
-    <div class="form-container">
-      <h1 class="title">Log In</h1>
-      <form class="form">
-        <input
-          class="form__input"
-          type="text"
-          name="email"
-          placeholder="Email"
-        />
-        <input
-          class="form__input"
-          type="password"
-          name="password"
-          placeholder="Password"
-        />
-        <input class="form__btn" type="submit" value="Log In" />
-        <div class="form__remember">
-          <input id="remember" type="checkbox" name="remember" value="on" />
-          <label for="remember">Remember me</label>
+    <div class="container">
+      <div class="form-container">
+        <h1 class="title--login">Log In</h1>
+        <form class="form">
+          <input
+            class="form__input"
+            type="text"
+            name="email"
+            placeholder="Email"
+          />
+          <input
+            class="form__input"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
+          <input class="form__btn" type="submit" value="Log In" />
+          <div class="form__remember">
+            <input id="remember" type="checkbox" name="remember" value="on" />
+            <label for="remember">Remember me</label>
+          </div>
+        </form>
+        <div class="policy">
+        アカウントを作成することにより<br>Bergの利用規約とプライバシーポリシーに同意するものとみなされます
         </div>
-      </form>
-      <div class="policy">
-        アカウントを作成することにより Bergの利用規約とプライバシーポリシーに
-        同意するものとみなされます
       </div>
     </div>
+
   </body>
+  
 </html>

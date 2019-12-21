@@ -1,5 +1,4 @@
 <!-- トップページ -->
-
 <!DOCTYPE html>
 
     <head>
@@ -13,8 +12,8 @@
     <!-- Google fontsの読みこみ -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Arapey|Mansalva|Nothing+You+Could+Do|Noto+Serif+JP|Shadows+Into+Light|Ubuntu&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../../public/css/reset.css" />
-    <link rel="stylesheet" href="../../public/css/top.css" />
+    <link rel="stylesheet" href="{{asset('/css/reset.css')}}" />
+    <link rel="stylesheet" href="{{asset('/css/top.css')}}" />
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
@@ -22,7 +21,8 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title">
-                    <img src="../img/Primary_logo.png">
+                    <!-- <img src="../img/Primary_logo.png"> -->
+                    <img src="/img/Primary_logo.png">
                 </div>
                 <div class="slide">
                     <img src="../img/date3.jpg">
