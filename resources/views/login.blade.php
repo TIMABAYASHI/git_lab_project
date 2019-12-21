@@ -1,3 +1,10 @@
+<!-- views > auth > login.blade.phpに挿入してください -->
+
+
+
+
+
+
 <!-- ログイン入力画面 -->
 <!DOCTYPE html>
 <html lang="jp">

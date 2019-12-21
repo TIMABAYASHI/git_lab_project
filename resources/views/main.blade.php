@@ -1,3 +1,8 @@
+<!-- home.blade.phpに挿入してください -->
+
+
+
+
 <!DOCTYPE html>
 <html lang="jp">
 

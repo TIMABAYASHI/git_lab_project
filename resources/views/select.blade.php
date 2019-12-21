@@ -44,6 +44,10 @@
           アクティブに動きたい！
         </button>
         <!-- <input class="form__btn" type="submit" value="Send" /> -->
+
+        <a href="{{ url('/select2') }}"> 次へ</a>
+
+
       </form>
     </div>
   </body>

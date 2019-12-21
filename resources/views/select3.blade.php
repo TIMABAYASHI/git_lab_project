@@ -44,6 +44,10 @@
           洋食がいい！
         </button>
         <!-- <input class="form__btn" type="submit" value="Send" /> -->
+
+        <a href="{{ url('/select4') }}"> 次へ</a>
+
+
       </form>
     </div>
   </body>

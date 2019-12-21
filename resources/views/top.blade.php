@@ -29,8 +29,8 @@
                 </div>     
             </div>
         </div>
-        <button class="login"><a href="./login.blade.php">ログイン</a></button>
-        <button class="resist"><a href="./resist.blade.php">新規登録</a></button>
+        <button class="login"><a href="{{ url('/login') }}">ログイン</a></button>
+        <button class="register"><a href="{{ url('/register') }}">新規登録</a></button>
 
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 </body>

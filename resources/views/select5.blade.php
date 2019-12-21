@@ -44,6 +44,11 @@
           歴史的な場所
         </button>
         <!-- <input class="form__btn" type="submit" value="Send" /> -->
+
+        <!-- q1~10の結果からデータ表示する -->
+        <a href="{{ url('/plan_select') }}"> 次へ</a>
+
+
       </form>
     </div>
   </body>

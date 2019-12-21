@@ -1,3 +1,8 @@
+<!-- views > auth > register.blade.phpに挿入お願いします-->
+<!-- 移動したら削除で -->
+
+
+
 <!-- 会員登録ページ -->
 <!DOCTYPE html>
 <html lang="jp">
