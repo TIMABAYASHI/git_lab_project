@@ -61,13 +61,49 @@
                             </div>
                         </div>
 
+                        
+                        <div class="form-group{{ $errors->has('birthday') ? ' has-error' : '' }}">
+                            <label for="birthday" class="col-md-4 control-label">生年月日</label>
+                            
+                            <div class="col-md-6">
+                                <input id="birthday" type="date" class="form-control" name="birthday" min="1970-01-01" max="1999-12-31" value="{{ old('birthday') }}" required autofocus>
+                                
+                                @if ($errors->has('birthday'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('birthday') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+                        
+                        <div class="form-group{{ $errors->has('bloodtype') ? ' has-error' : '' }}">
+                            <label for="bloodtype" class="col-md-4 control-label">血液型</label>
+                            <div class="col-md-6">
+                                <!-- <input id="bloodtype" type="text" class="form-control" name="bloodtype" value="{{ old('bloodtype') }}" required autofocus> -->
+                                        <select class="form-control" name="bloodtype" id="bloodtype" value="{{ old('bloodtype') }}" required autofocus>
+            <option class="plcholder" value='' disabled selected style='display:none;'></option>
+            <option value="A">A型</option>
+            <option value="O">O型</option>
+            <option value="B">B型</option>
+            <option value="AB">AB型</option>
+        </select>          
+
+                                @if ($errors->has('bloodtype'))
+                                <span class="help-block">
+                                    <strong>{{ $errors->first('bloodtype') }}</strong>
+                                </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    登録する
+                                    Submit
                                 </button>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>

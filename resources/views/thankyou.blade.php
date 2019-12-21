@@ -23,7 +23,7 @@
           <div class="policy">ログアウトしました!<br>ご利用ありがとうございました。
           </div>
         <form class="form">
-          <button class="form__btn form__btn--relogin"><a href="./login.blade.php">Re-Login</a></button>
+          <button class="form__btn form__btn--relogin"><a href="{{ url('/login') }}">Re-Login</a></button>
         </form>
       </div>
     </div>

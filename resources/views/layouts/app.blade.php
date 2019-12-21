@@ -14,6 +14,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('css')
+
 </head>
 <body>
     <div id="app">
@@ -45,7 +47,7 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">ログイン</a></li>
+                            <li><a href="{{ route('login') }}">Log in</a></li>
                             <li><a href="{{ route('register') }}">会員登録</a></li>
                         @else
                             <li class="dropdown">

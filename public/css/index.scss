@@ -10,9 +10,8 @@
   }
 }
 
-// ログイン画面の写真
-.container {
-  @include container(812px);
+ログイン画面の写真 .container {
+  @include container(600px);
   @include background-image("date6.jpg");
 }
 

@@ -14,8 +14,8 @@
   font-size: 2rem;
 }
 
-.container, .container2 {
-  height: 812px;
+ログイン画面の写真 .container, ログイン画面の写真 .container2 {
+  height: 600px;
   display: flex;
   align-items: center;
   background-image: url("/img/date6.jpg");
