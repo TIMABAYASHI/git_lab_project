@@ -38,14 +38,14 @@
         <h1 class="title">どっちの気分？</h1>
         <!-- <h2 class="question">どっちの気分？</h2> -->
         <form class="form" method="post" action="#">
-          <button class="form__input" type="submit" name="feeling" value="0">
+          <button class="form__input" name="feeling" value="0">
             新しいスポット!
           </button>
-          <button class="form__input" type="submit" name="feeling" value="1">
+          <button class="form__input" name="feeling" value="1">
             歴史的な場所
           </button>
           <!-- <input class="form__btn" type="submit" value="Send" /> -->
-          <a href="{{ url('/plan_edit') }}"> 次へ</a>
+          <a href="{{ url('/plan_see') }}"> 次へ</a>
 
         </form>
       </div>
