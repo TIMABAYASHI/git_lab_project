@@ -55,7 +55,7 @@ $font-e2: "Mansalva", cursive;
 // *引数($fileName)に画像のファイル名を与える
 // ＊mixinを当てる要素のサイズを指定すること
 @mixin background-image($fileName) {
-  $PATH_IMG: "../../resources/img/";
+  $PATH_IMG: "/img/";
   background-image: url($PATH_IMG+$fileName);
   background-repeat: no-repeat;
   background-position: 50% 50%;
