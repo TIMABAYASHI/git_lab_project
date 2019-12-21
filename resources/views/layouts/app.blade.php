@@ -16,6 +16,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @yield('css')
 
+        <!-- Google fontsの読みこみ -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Arapey|Mansalva|Nothing+You+Could+Do|Noto+Serif+JP|Shadows+Into+Light|Ubuntu&display=swap"
+      rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+
 </head>
 <body>
     <div id="app">

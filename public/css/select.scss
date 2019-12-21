@@ -35,6 +35,15 @@ body {
   &__input {
     @include btn-2;
   }
+  &__btn {
+    @include btn-1;
+    width: 50%;
+    & a {
+      color: gray;
+      text-decoration: none;
+      font-family: $font-e1;
+    }
+  }
 }
 
 ul {
