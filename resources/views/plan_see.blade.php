@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="../../public/js/jquery-2.1.3.min.js"></script>
+    <script src="{{asset('/js/jquery-2.1.3.min.js')}}"></script>
     <!-- fontawesomeの読み込み -->
     <link
       rel="stylesheet"
@@ -16,8 +16,8 @@
     <!-- Google fontsの読みこみ -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Arapey|Mansalva|Nothing+You+Could+Do|Noto+Serif+JP|Shadows+Into+Light|Ubuntu&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="../../public/css/reset.css" />
-    <link rel="stylesheet" href="../../public/css/plan_see.css" />
+    <link rel="stylesheet" href="{{asset('/css/reset.css')}}" />
+    <link rel="stylesheet" href="{{asset('/css/plan_see.css')}}"/>
     <style>
       #map { height: 100%; width: 100%}
     </style>
@@ -108,7 +108,7 @@
 <!--// 折り畳まれ部分 -->
 </div>
   <div class="bottom">
-    <button class="plan__btn__send" type="submit" neme="send">これでOK!</button>
+    <button class="plan__btn__send" type="submit" name="send">これでOK!</button>
   </div> 
       <!-- </form> -->
 
