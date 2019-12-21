@@ -18,52 +18,75 @@ Route::get('/', function () {
     return view('top');
 });
 
-// 2.
-Route::get('/info', function () {
-    return view('info');
-});
 
-// 3.
-Route::get('/login', function () {
-    return view('login');
-});
-
-// 4.
-Route::get('/logout', function () {
-    return view('ligout');
-});
-
-// 5.
+// 2.マイページ
 Route::get('/mypage', function () {
     return view('mypage');
 });
 
-// 6.
-Route::get('/plan_see', function () {
-    return view('plan_see');
-});
 
-// 7.
+// 3.プラン編集
 Route::get('/plan_edit', function () {
     return view('plan_edit');
 });
 
-// 8.
-Route::get('/reco', function () {
-    return view('reco');
+
+// 4.プラン閲覧
+Route::get('/plan_see', function () {
+    return view('plan_see');
 });
 
-// 9.
-Route::get('/resist', function () {
-    return view('resist');
+// 5.プラン閲覧
+Route::get('/plan_see', function () {
+    return view('plan_see');
 });
 
-// 10.
-Route::get('/search', function () {
-    return view('search');
+// 6.セレクト画面
+Route::get('/select', function () {
+    return view('select');
+});
+// 7.セレクト画面2
+Route::get('/select2', function () {
+    return view('select2');
+});
+// 8.セレクト画面3
+Route::get('/select3', function () {
+    return view('select3');
+});
+// 9.セレクト画面4
+Route::get('/select4', function () {
+    return view('select4');
+});
+// 10.セレクト画面5
+Route::get('/select5', function () {
+    return view('select5');
 });
 
-// // 11.
-// Route::get('/', function () {
-//     return view('');
-// });
+// ログイン周り+メインページのルート
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+// もっと検索する画面
+Route::post('/q1', function (Request $request) {
+
+});
+Route::post('/q2', function (Request $request) {
+
+});
+Route::post('/q3', function (Request $request) {
+
+});
+Route::post('/q4', function (Request $request) {
+
+});
+Route::post('/q5', function (Request $request) {
+
+});
+
+
+
+// // ログイン後のルート
+
+// serect.blade.phpのデータPOSTのルート
+Route::post('hoge/form', 'HogeController@postHoge');
