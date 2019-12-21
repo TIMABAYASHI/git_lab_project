@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('css')
+{{-- この場所に画面毎のcssを記述する --}}    
+<link rel="stylesheet" href="{{asset('/css/reset.css')}}" />
+ <link rel="stylesheet" href="{{asset('/css/index.css')}}" />
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">
