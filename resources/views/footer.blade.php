@@ -1,5 +1,4 @@
-<!-- フッターを入れたいところに、下記一行をコメント外してコピペする -->
-<?php //include('./footer.blade.php'); ?> 
+<!-- フッターを入れたいところに、includeする -->
 <div class="footer">
     <div class="igroup">
         <a href="./top.blade.php"><i class="material-icons mi menu">

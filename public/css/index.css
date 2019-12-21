@@ -18,14 +18,14 @@
   height: 812px;
   display: flex;
   align-items: center;
-  background-image: url("../../resources/img/date6.jpg");
+  background-image: url("/img/date6.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
 
 .container2 {
-  background-image: url("../../resources/img/date5.jpg");
+  background-image: url("/img/date5.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;

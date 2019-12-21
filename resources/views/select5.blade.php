@@ -18,8 +18,8 @@
     />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 
-    <link rel="stylesheet" href="../../public/css/reset.css" />
-    <link rel="stylesheet" href="../../public/css/select.css" />
+    <link rel="stylesheet" href="{{asset('/css/reset.css')}}" />
+    <link rel="stylesheet" href="{{asset('/css/select.css')}}" />
     <title>select</title>
   </head>
 
@@ -48,6 +48,6 @@
         </form>
       </div>
     </div>
-    <?php include('./footer.blade.php'); ?> 
+    @include('footer')
   </body>
 </html>

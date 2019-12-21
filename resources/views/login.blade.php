@@ -12,9 +12,10 @@
       href="https://fonts.googleapis.com/css?family=Arapey|Mansalva|Nothing+You+Could+Do|Noto+Serif+JP|Shadows+Into+Light|Ubuntu&display=swap"
       rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link rel="stylesheet" href="../../public/css/reset.css" />
-    <link rel="stylesheet" href="../../public/css/index.css" />
-    <title>ログイン</title>
+    <link rel="stylesheet" href="{{asset('/css/reset.css')}}" />
+    <link rel="stylesheet" href="{{asset('/css/index.css')}}" />
+
+    <title>Login</title>
   </head>
 
   <body>
@@ -47,4 +48,5 @@
     </div>
 
   </body>
+  
 </html>

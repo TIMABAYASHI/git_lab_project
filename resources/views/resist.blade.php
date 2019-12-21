@@ -12,8 +12,10 @@
     <!-- Google fontsの読みこみ -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Arapey|Mansalva|Nothing+You+Could+Do|Noto+Serif+JP|Shadows+Into+Light|Ubuntu&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../../public/css/reset.css" />
-    <link rel="stylesheet" href="../../public/css/resist.css" />
+    <!-- <link rel="stylesheet" href="../../public/css/reset.css" /> -->
+    <link rel="stylesheet" href="{{asset('/css/reset.css')}}" />
+    <!-- <link rel="stylesheet" href="../../public/css/resist.css" /> -->
+    <link rel="stylesheet" href="{{asset('/css/resist.css')}}" />
     <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
     <title>会員登録ページ</title>
 </head>
@@ -31,9 +33,10 @@
     <h2 class="form__title">生年月日 :</h2>
         <input
           class="form__input"
-          type="password"
+          type="date"
           name="birthday"
           placeholder=""
+          min="1970-01-01" max="1999-12-31"
         />
     <h2 class="form__title">郵便番号 :</h2>
         <input
@@ -59,13 +62,14 @@
           placeholder=""
         /> -->
     <h2 class="form__title">血液型 :</h2>
-        <input
-          class="form__input"
-          type="text"
-          name="bloodtype"
-          placeholder="B"
-        />
-<input class="form__input__btn" type="submit" neme="send">
-    </from>
+        <select class="form__input" name="bloodtype" id="">
+            <option class="plcholder" value='' disabled selected style='display:none;'></option>
+            <option value="A">A型</option>
+            <option value="O">O型</option>
+            <option value="B">B型</option>
+            <option value="AB">AB型</option>
+        </select>          
+    <input class="form__input__btn" type="submit" name="send" value="Send">
+    </form>
 </body>
 </html>
