@@ -21,8 +21,8 @@
     <!-- Google fontsの読みこみ -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Arapey|Mansalva|Nothing+You+Could+Do|Noto+Serif+JP|Shadows+Into+Light|Ubuntu&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="../../public/css/reset.css" />
-    <link rel="stylesheet" href="../../public/css/board.css" />
+    <link rel="stylesheet" href="{{asset('/css/reset.css')}}" />
+    <link rel="stylesheet" href="{{asset('/css/board.css')}}" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     
   </head>
@@ -44,7 +44,7 @@
     </tr>
     <tr class="name__table">
         <td class="post__title__1" >プラン名：</td>
-        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">{{$plans->name}}</a></td>
+        <td class="post__title__2" name="name"><a href="plan_edit.blade.php"></a></td>
       <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
     </tr>
     <tr>
@@ -67,12 +67,12 @@
     <tr>
       <div class="date__table">
         <td class="post__date__1" >投稿日：</td>
-        <td class="post__date__2" >{{$plans->name}}</td>
+        <td class="post__date__2" ></td>
       </div>
     </tr>
     <tr class="name__table">
         <td class="post__title__1" >プラン名：</td>
-        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">{{$plans->name}}</a></td>
+        <td class="post__title__2" name="name"><a href="plan_edit.blade.php"></a></td>
       <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
     </tr>
     <tr>
