@@ -29,7 +29,7 @@
     <i class="material-icons back">
       keyboard_arrow_left
     </i>
-    <h1 class="title"><?=$name?>さんのページ</h1>
+    <h1 class="title">さんのページ</h1>
     <h2 class="comment__p">プラン保存履歴</h2>
   <div class="search__box">
   <form action="" method="post">
