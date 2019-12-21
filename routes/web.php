@@ -25,21 +25,27 @@ Route::get('/mypage', function () {
 });
 
 
-// 3.プラン編集
+// 3.会員登録に飛ぶページ
 Route::get('/plan_edit', function () {
     return view('plan_edit');
 });
 
 
 // 4.プラン閲覧
+Route::get('/plan_post', function () {
+    return view('plan_post');
+});
+
+// 5.
 Route::get('/plan_see', function () {
     return view('plan_see');
 });
 
-// 5.プラン閲覧
-Route::get('/plan_see', function () {
-    return view('plan_see');
+// 5.編集完了『確定』後画面。SNS送信するか確認するページ
+Route::get('/board', function () {
+    return view('board');
 });
+
 
 // 6.セレクト画面
 Route::get('/select', function () {
@@ -62,6 +68,23 @@ Route::get('/select5', function () {
     return view('select5');
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ログイン周り+メインページのルート
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
@@ -83,6 +106,15 @@ Route::post('/q4', function (Request $request) {
 Route::post('/q5', function (Request $request) {
 
 });
+
+
+
+
+
+
+
+
+
 
 
 
