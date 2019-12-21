@@ -15,12 +15,12 @@ class CreatePlansTable extends Migration
     {
         Schema::create('plans', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->time('time');
-            $table->string('place');
-            $table->string('address');
-            $table->string('photo');
-            $table->string('coment');
+            $table->string('name')->nullable();
+            $table->time('time')->nullable();
+            $table->string('place')->nullable();
+            $table->string('address')->nullable();
+            $table->string('photo')->nullable();
+            $table->string('coment')->nullable();
         });
     }
 

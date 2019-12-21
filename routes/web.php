@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 
-// 2.マイページ
+// 2.マイページ  　　でない・・・
 Route::get('/mypage', function () {
     return view('mypage');
 });
@@ -31,39 +31,47 @@ Route::get('/plan_edit', function () {
 });
 
 
-// 4.プラン閲覧
+// 4.プラン閲覧 
 Route::get('/plan_post', function () {
     return view('plan_post');
 });
 
-// 5.
+// 5.プランみるとこ
 Route::get('/plan_see', function () {
     return view('plan_see');
 });
 
-// 5.編集完了『確定』後画面。SNS送信するか確認するページ
+// 6.編集完了『確定』後画面。SNS送信するか確認するページ　　でない・・・
 Route::get('/board', function () {
     return view('board');
 });
 
+// 7.心情テストQ1〜5のページ　　でない・・・
+Route::get('/resist2', function () {
+    return view('resist2');
+});
 
-// 6.セレクト画面
+
+
+
+
+
+
+
+
+// 7.セレクト画面
 Route::get('/select', function () {
     return view('select');
 });
-// 7.セレクト画面2
 Route::get('/select2', function () {
     return view('select2');
 });
-// 8.セレクト画面3
 Route::get('/select3', function () {
     return view('select3');
 });
-// 9.セレクト画面4
 Route::get('/select4', function () {
     return view('select4');
 });
-// 10.セレクト画面5
 Route::get('/select5', function () {
     return view('select5');
 });
@@ -90,7 +98,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-// もっと検索する画面
+// データベースにPOSTする
 Route::post('/q1', function (Request $request) {
 
 });

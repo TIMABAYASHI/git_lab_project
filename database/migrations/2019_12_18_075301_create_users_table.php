@@ -18,15 +18,15 @@ class CreateUsersTable extends Migration
                     $table->string('name',32)->default("");
                     $table->string('email')->unique();
                     $table->string('password')->nullable();
-                    $table->string('birthday');
-                    $table->string('bloodtype');
-                    $table->integer('q1');
-                    $table->integer('q2');
-                    $table->integer('q3');
-                    $table->integer('q4');
-                    $table->integer('q5');
-                    $table->rememberToken();
-                    $table->timestamps();
+                    $table->string('birthday')->nullable();
+                    $table->string('bloodtype')->nullable();
+                    $table->integer('q1')->nullable();
+                    $table->integer('q2')->nullable();
+                    $table->integer('q3')->nullable();
+                    $table->integer('q4')->nullable();
+                    $table->integer('q5')->nullable();
+                    $table->rememberToken()->nullable();
+                    $table->timestamps()->nullable();
                 });
             }
         
