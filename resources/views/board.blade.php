@@ -1,12 +1,12 @@
 <?PHP
-    $file_name = "toukou_2.txt"; /*読込ファイルの指定*/
-    $ret_array = file( $file_name ); /*ファイルを全て配列に入れる*/
-    for( $i = 0; $i < count($ret_array); ++$i ) { /*行末までループする*/
+    // $file_name = "toukou_2.txt"; /*読込ファイルの指定*/
+    // $ret_array = file( $file_name ); /*ファイルを全て配列に入れる*/
+    // for( $i = 0; $i < count($ret_array); ++$i ) { /*行末までループする*/
 
-        echo( $ret_array[$i] . "<br />\n" ); /*配列を順番に表示する*/
+    //     echo( $ret_array[$i] . "<br />\n" ); /*配列を順番に表示する*/
 
-    }
-    ?>
+    // }
+    // ?>
 
 <!DOCTYPE html>
 <html lang="jp">
@@ -32,7 +32,7 @@
   <h1>掲示板投稿</h1>
 </div>
 
-<form action="toukou_1.blade.php" method="post"> <!--ファイル、methodの指定-->
+<!-- <form action="toukou_1.blade.php" method="post">  -->
 
 <div class="post__table">
   <table>
@@ -44,7 +44,7 @@
     </tr>
     <tr class="name__table">
         <td class="post__title__1" >プラン名：</td>
-        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">渋谷AR体験デートプラン<?=$title?></a></td>
+        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">{{$plans->name}}</a></td>
       <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
     </tr>
     <tr>
@@ -67,12 +67,12 @@
     <tr>
       <div class="date__table">
         <td class="post__date__1" >投稿日：</td>
-        <td class="post__date__2" >2019/12/24</td>
+        <td class="post__date__2" >{{$plans->name}}</td>
       </div>
     </tr>
     <tr class="name__table">
         <td class="post__title__1" >プラン名：</td>
-        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">ミッキーとふれあいプラン<?=$title?></a></td>
+        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">{{$plans->name}}</a></td>
       <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
     </tr>
     <tr>
