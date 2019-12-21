@@ -67,6 +67,31 @@ body {
   border: 1px solid #76d9e8;
   color: #fff;
 }
+.form__btn {
+  cursor: pointer;
+  border-radius: 4em;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right, #24bddc, #76d9e8);
+  border: 0;
+  font-size: 1em;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  display: block;
+  width: 40%;
+  padding: 10px 40px;
+  margin: 0 auto;
+  width: 50%;
+}
+.form__btn:hover {
+  color: #24bddc;
+  background: #fff;
+  border: 1px solid #24bddc;
+}
+.form__btn a {
+  color: gray;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+}
 
 ul {
   list-style: none;

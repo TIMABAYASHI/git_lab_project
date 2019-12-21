@@ -96,3 +96,28 @@ input[type="radio"] {
   justify-content: space-around;
   margin: 0 auto;
 }
+
+// ブートストラップ後
+
+body {
+  font-family: $font-e1;
+}
+
+// 外枠
+.panel-defaultb {
+  @include box-1;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+// タイトル
+.panel-headingb {
+  padding-top: 10%;
+  @include title-1;
+}
+
+// submitボタン
+.btnsubmit {
+  @include btn-1;
+  text-align: center;
+  padding: 2%;
+}
