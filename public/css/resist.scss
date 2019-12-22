@@ -65,11 +65,8 @@ body {
 .label {
   //   display: block;
   //   float: left;
-  margin: 5px;
   width: 40%;
   height: 40px;
-  padding-left: 5px;
-  padding-right: 5px;
   color: $main-color1;
   text-align: center;
   line-height: 2rem;
@@ -77,6 +74,10 @@ body {
   border: 1px solid $main-color3;
   border-radius: 2rem;
   transition: 0.3s;
+  margin: 5px;
+  margin-bottom: 0;
+  padding-left: 5px;
+  padding-right: 5px;
   &:hover {
     background-color: #bebebe;
   }
@@ -97,7 +98,7 @@ input[type="radio"] {
   margin: 0 auto;
 }
 
-// ブートストラップ後
+// ブートストラップ後(register)
 
 body {
   font-family: $font-e1;
@@ -107,11 +108,13 @@ body {
 .panel-defaultb {
   @include box-1;
   background: rgba(255, 255, 255, 0.8);
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 // タイトル
 .panel-headingb {
-  padding-top: 10%;
+  padding-top: 5%;
   @include title-1;
 }
 
@@ -120,4 +123,8 @@ body {
   @include btn-1;
   text-align: center;
   padding: 2%;
+}
+
+.last {
+  margin-bottom: 12%;
 }

@@ -34,22 +34,34 @@
               <li><i class="material-icons list--next" >looks_4</i></li>
               <li><i class="material-icons list--now" >looks_5</i></li>
           </ul> 
-          <!-- </div> -->
         <h1 class="title">どっちの気分？</h1>
-        <!-- <h2 class="question">どっちの気分？</h2> -->
-        <form class="form" method="post" action="#">
-          <button class="form__input" name="q10" value="0">
-            新しいスポット!
-          </button>
-          <button class="form__input" name="q10" value="1">
-            歴史的な場所
-          </button>
-          <!-- <input class="form__btn" type="submit" value="Send" /> -->
-          <button class="form__btn"><a href="{{ url('/plan_see') }}">Check it!!</a><button>
+      <form class="form" method="post" action="#">
+        <div class="radio-tile-group">
+          <div class="input-container">
+            <input id="trend" class="radio-button" type="radio" name="q10" value="0" />
+            <div class="radio-tile">
+              <div class="icon">
+                <i class="material-icons list--now">trending_up</i>
+              </div>
+              <label for="trend" class="radio-tile-label">新しさ</label>
+            </div>
+          </div>
 
-        </form>
-      </div>
+          <div class="input-container">
+            <input id="tradition" class="radio-button" type="radio" name="q10" value="1" />
+            <div class="radio-tile">
+              <div class="icon">
+                <i class="material-icons list--now" >trending_flat</i>
+              </div>
+              <label for="tradition" class="radio-tile-label">伝統的</label>
+            </div>
+          </div>
+          <button class="form__btn form__btn--checkit" type="submit">Check it!<button>        
+          <!-- <button class="form__btn form__btn--checkit"><a href="{{ url('/plan_see') }}">Check it!!</a><button> -->
+        </div>
+      </form>
     </div>
+  </div>
     @include('footer')
 
     <!-- <section class="page one">

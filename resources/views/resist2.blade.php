@@ -24,41 +24,42 @@
     <form class="form form2" action=".php" method="POST">
         <h2 class="question">第1問</h2>
         <div class="q-container">
-            <input class="q-container__input" type="radio" name="q6" id="indoor" value="0" />
+            <input class="q-container__input" type="radio" name="q1" id="indoor" value="0" />
             <label for="indoor" class="label">インドア派</label>
-            <input class="q-container__input" type="radio" name="q6" id="outdoor" value="1">
+            <input class="q-container__input" type="radio" name="q1" id="outdoor" value="1">
             <label for="outdoor" class="label">アウトドア派</label>
         </div>
     <h2 class="question">第2問</h2>
         <div class="q-container">
-            <input class="q-container__input" type="radio" name="q7" id="repeater" value="0">
+            <input class="q-container__input" type="radio" name="q2" id="repeater" value="0">
             <label for="repeater" class="label">リピーター</label>
-            <input class="q-container__input" type="radio" name="q7" id="innovator" value="1" />
+            <input class="q-container__input" type="radio" name="q2" id="innovator" value="1" />
             <label for="innovator" class="label">ミーハー</label>
         </div>
     <h2 class="question">第3問</h2>
         <div class="q-container">
-            <input class="q-container__input" type="radio" name="q8" id="listener" value="0" />
+            <input class="q-container__input" type="radio" name="q3" id="listener" value="0" />
             <label for="listener" class="label">聞き上手</label>
-            <input class="q-container__input" type="radio" name="q8" id="speaker" value="1">
+            <input class="q-container__input" type="radio" name="q3" id="speaker" value="1">
             <label for="speaker" class="label">話し上手</label>
         </div>
     <h2 class="question">第4問</h2>
         <div class="q-container">
-            <input class="q-container__input" type="radio" name="q9" id="think" value="0" />
+            <input class="q-container__input" type="radio" name="q4" id="think" value="0" />
             <label for="think" class="label">まず考える</label>
-            <input class="q-container__input" type="radio" name="q9" id="do" value="1">
+            <input class="q-container__input" type="radio" name="q4" id="do" value="1">
             <label for="do" class="label">行動が先</label>
         </div>
     <h2 class="question">第5問</h2>
-        <div class="q-container">
-            <input class="q-container__input" type="radio" name="q10" id="smart" value="0" />
+        <div class="q-container last">
+            <input class="q-container__input" type="radio" name="q5" id="smart" value="0" />
             <label for="smart" class="label">頭脳で勝負</label>
-            <input class="q-container__input" type="radio" name="q10" id="warm" value="1">
+            <input class="q-container__input" type="radio" name="q5" id="warm" value="1">
             <label for="warm" class="label">ハートでしょ</label>
         </div>
         <input class="form__input__btn" type="submit" name="send" value="Send">
 
 </form>
+
 </body>
 </html>
