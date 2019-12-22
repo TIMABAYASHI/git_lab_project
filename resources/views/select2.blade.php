@@ -34,21 +34,33 @@
               <li><i class="material-icons list--next" >looks_4</i></li>
               <li><i class="material-icons list--next" >looks_5</i></li>
           </ul> 
-          <!-- </div> -->
         <h1 class="title">どっちの気分？</h1>
-        <!-- <h2 class="question">どっちの気分？</h2> -->
-        <form class="form" method="post" action="#">
-          <button class="form__input" type="submit" name="q7" value="0">
-            予算は控えめに
-          </button>
-          <button class="form__input" type="submit" name="q7" value="1">
-            パーっと使うぞ！
-          </button>
-          <!-- <input class="form__btn" type="submit" value="Send" /> -->
-          <button class="form__btn"><a href="{{ url('/select3') }}"> Next</a><button>
-        </form>
-      </div>
+      <form class="form" method="post" action="#">
+        <div class="radio-tile-group">
+          <div class="input-container">
+            <input id="saving" class="radio-button" type="radio" name="q7" value="0" />
+            <div class="radio-tile">
+              <div class="icon">
+                <i class="material-icons list--now">attach_money</i>
+              </div>
+              <label for="saving" class="radio-tile-label">節約！</label>
+            </div>
+          </div>
+
+          <div class="input-container">
+            <input id="rich" class="radio-button" type="radio" name="q7" value="1" />
+            <div class="radio-tile">
+              <div class="icon">
+                <i class="material-icons list--now" >music_note</i>
+              </div>
+              <label for="rich" class="radio-tile-label">パーっと</label>
+            </div>
+          </div>
+          <button class="form__btn" type="submit">Next<button>        
+        </div>
+      </form>
     </div>
+  </div>
     @include('footer')
   </body>
 </html>
