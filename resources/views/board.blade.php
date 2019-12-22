@@ -16,6 +16,7 @@
     <title>keisiban</title>
     <!-- Fonts -->
     <script src="{{asset('/js/jquery-2.1.3.min.js')}}"></script>
+    <script src="{{asset('/js/jquery.raty.js')}}"></script>
     <!-- fontawesomeの読み込み -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
     <!-- Google fontsの読みこみ -->
@@ -23,10 +24,11 @@
     <link href="https://fonts.googleapis.com/css?family=Arapey|Mansalva|Nothing+You+Could+Do|Noto+Serif+JP|Shadows+Into+Light|Ubuntu&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{asset('/css/reset.css')}}" />
     <link rel="stylesheet" href="{{asset('/css/board.css')}}" />
+    <link rel="stylesheet" href="{{asset('/css/jquery.raty.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/fontawesome-stars.css"/ rel="stylesheet">
-    <script src="js/jquery.barrating.min.js"></script>
+    <!-- <link href="css/fontawesome-stars.css"/ rel="stylesheet"> -->
+    <!-- <script src="js/jquery.barrating.min.js"></script> -->
   </head>
 
 <body>
@@ -39,39 +41,32 @@
 <!-- <form action="toukou_1.blade.php" method="post">  -->
 
 <div class="post__table">
-    <select id="example1">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-  <table>
+<table>
+  <div class="point">
+    <p class="star" id="star1"></p>
+    <h2>4.24  </h2><h3>8件 </h3><i class="material-icons">sms</i>
+  </div>
+  
     <tr>
-      <div class="date__table">
+      <!-- <div class="date__table"> -->
         <td class="post__date__1" >投稿日　：</td>
         <td class="post__date__2" >2019/12/24</td>
-      </div>
     </tr>
-    <tr class="name__table">
-        <td class="post__title__1" >プラン名：</td>
-        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">ミッキーとふれあいプラン</a></td>
-      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
-    </tr>
-    <tr class="name__table">
-        <td class="post__title__1" >作成者名：</td>
-        <td class="post__title__2" name="name">いまっぱ</td>
-      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
-    </tr>
-
     <tr>
-      <td>コメント:</td>
-      <td><input type="text" name="comment" required></td> <!--コメント入力フォーム作成-->
+    <!-- <div class="name__table"> -->
+        <td class="post__title__1" >プラン名：</td>
+        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">渋谷最先端技術体験ツアー</a></td>
+      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
     </tr>
+    <tr>
+        <td class="post__title__1" >作成者名：</td>
+        <td class="post__title__2" name="name">ゆうと</td>
+      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
+    </tr>
+    <tr>
       <td colspan="2" align="center">
-      
-      <div class="sns_box" id="fb-root" >
-      <input class="send__btn" type="submit" value="投稿する"> 
+      <div class="sns_box" id="fb-root" >   
+      <button class="send__btn" type="submit" value="">評価する</td></button>
         <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size="small"><img src="../img/Twitter_Logo_Blue.png"></a>
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script>
         <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="15px" data-layout="button" data-action="like" data-size="small" data-share="true">
@@ -79,158 +74,227 @@
     </tr>
   </table>
 </div>
-<div class="post__table">
-    <select id="example2">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-  <table>
-    <tr>
-      <div class="date__table">
-        <td class="post__date__1" >投稿日　：</td>
-        <td class="post__date__2" ></td>
-      </div>
-    </tr>
-    <tr class="name__table">
-        <td class="post__title__1" >プラン名：</td>
-        <td class="post__title__2" name="name"><a href="plan_edit.blade.php"></a></td>
-      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
-    </tr>
-    <tr class="name__table">
-        <td class="post__title__1" >作成者名：</td>
-        <td class="post__title__2" name="name"></td>
-      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
-    </tr>
 
+<div class="post__table">
+<table>
+  <div class="point">
+    <p class="star" id="star2"></p>
+    <h2>2.18 </h2><h3>6件 </h3><i class="material-icons">sms</i>
+  </div>
+  
     <tr>
-      <td>コメント:</td>
-      <td><input type="text" name="comment" required></td> <!--コメント入力フォーム作成-->
+      <!-- <div class="date__table"> -->
+        <td class="post__date__1" >投稿日　：</td>
+        <td class="post__date__2" >2019/12/24</td>
     </tr>
-    
+    <tr>
+    <!-- <div class="name__table"> -->
+        <td class="post__title__1" >プラン名：</td>
+        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">ミッキーとふれあいプラン</a></td>
+      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
+    </tr>
+    <tr>
+        <td class="post__title__1" >作成者名：</td>
+        <td class="post__title__2" name="name">いまっぱ</td>
+      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
+    </tr>
+    <tr>
       <td colspan="2" align="center">
-      
-      <div class="sns_box" id="fb-root" >
-      <input class="send__btn" type="submit" value="投稿する">
-        <!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a> -->
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size="small"></a>
-        <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script> -->
+      <div class="sns_box" id="fb-root" >   
+      <button class="send__btn" type="submit" value="">評価する</td></button>
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size="small"><img src="../img/Twitter_Logo_Blue.png"></a>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script>
         <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="15px" data-layout="button" data-action="like" data-size="small" data-share="true">
       </div>
     </tr>
   </table>
 </div>
+
 <div class="post__table">
-    <select id="example3">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-  <table>
+<table>
+  <div class="point">
+    <p class="star" id="star3"></p>
+    <h2>3.82  </h2><h3>10件 </h3><i class="material-icons">sms</i>
+  </div>
+  
     <tr>
-      <div class="date__table">
+      <!-- <div class="date__table"> -->
         <td class="post__date__1" >投稿日　：</td>
-        <td class="post__date__2" ></td>
-      </div>
+        <td class="post__date__2" >2019/12/24</td>
     </tr>
-    <tr class="name__table">
+    <tr>
+    <!-- <div class="name__table"> -->
         <td class="post__title__1" >プラン名：</td>
-        <td class="post__title__2" name="name"><a href="plan_edit.blade.php"></a></td>
-      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
-    </tr>
-    <tr class="name__table">
-        <td class="post__title__1" >作成者名：</td>
-        <td class="post__title__2" name="name"></td>
+        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">家族団欒ほっこりプラン</a></td>
       <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
     </tr>
     <tr>
-      <td>コメント:</td>
-      <td><input type="text" name="comment" required></td> <!--コメント入力フォーム作成-->
+        <td class="post__title__1" >作成者名：</td>
+        <td class="post__title__2" name="name">mayo</td>
+      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
+    </tr>
+    <tr>
       <td colspan="2" align="center">
-      
-      <div class="sns_box" id="fb-root" >
-      <input class="send__btn" type="submit" value="投稿する">
-        <!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a> -->
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size="small"></a>
-        <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script> -->
-        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="15px" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
+      <div class="sns_box" id="fb-root" >   
+      <button class="send__btn" type="submit" value="">評価する</td></button>
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size="small"><img src="../img/Twitter_Logo_Blue.png"></a>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script>
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="15px" data-layout="button" data-action="like" data-size="small" data-share="true">
       </div>
     </tr>
   </table>
 </div>
-  <div class="post__table">
-    <select id="example4">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-  <table>
+
+<div class="post__table">
+<table>
+  <div class="point">
+    <p class="star" id="star4"></p>
+    <h2>2.38  </h2><h3>3件 </h3><i class="material-icons">sms</i>
+  </div>
+  
     <tr>
-      <div class="date__table">
+      <!-- <div class="date__table"> -->
         <td class="post__date__1" >投稿日　：</td>
-        <td class="post__date__2" ></td>
-      </div>
+        <td class="post__date__2" >2019/12/24</td>
     </tr>
-    <tr class="name__table">
+    <tr>
+    <!-- <div class="name__table"> -->
         <td class="post__title__1" >プラン名：</td>
-        <td class="post__title__2" name="name"><a href="plan_edit.blade.php"></a></td>
-      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
-    </tr>
-    <tr class="name__table">
-        <td class="post__title__1" >作成者名：</td>
-        <td class="post__title__2" name="name"></td>
+        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">上野パンダプラン</a></td>
       <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
     </tr>
     <tr>
-      <td>コメント:</td>
-      <td><input type="text" name="comment" required></td> <!--コメント入力フォーム作成-->
+        <td class="post__title__1" >作成者名：</td>
+        <td class="post__title__2" name="name">いまっぱ</td>
+      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
     </tr>
+    <tr>
       <td colspan="2" align="center">
-      
-      <div class="sns_box" id="fb-root" >
-      <input class="send__btn" type="submit" value="投稿する">
-        <!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a> -->
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size="small"></a>
-        <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script> -->
-        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="15px" data-layout="button" data-action="like" data-size="small" data-share="true"></div>
+      <div class="sns_box" id="fb-root" >   
+      <button class="send__btn" type="submit" value="">評価する</td></button>
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size="small"><img src="../img/Twitter_Logo_Blue.png"></a>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script>
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="15px" data-layout="button" data-action="like" data-size="small" data-share="true">
       </div>
     </tr>
   </table>
+</div>
+
+<div class="post__table">
+<table>
+  <div class="point">
+    <p class="star" id="star5"></p>
+    <h2>1.00 </h2><h3>1件 </h3><i class="material-icons">sms</i>
   </div>
+  
+    <tr>
+      <!-- <div class="date__table"> -->
+        <td class="post__date__1" >投稿日　：</td>
+        <td class="post__date__2" >2019/12/21</td>
+    </tr>
+    <tr>
+    <!-- <div class="name__table"> -->
+        <td class="post__title__1" >プラン名：</td>
+        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">自宅でまったりプラン</a></td>
+      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
+    </tr>
+    <tr>
+        <td class="post__title__1" >作成者名：</td>
+        <td class="post__title__2" name="name">いまっぱ</td>
+      <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+      <div class="sns_box" id="fb-root" >   
+      <button class="send__btn" type="submit" value="">評価する</td></button>
+        <a class="twitter-share-button" href="https://twitter.com/intent/tweet" data-size="small"><img src="../img/Twitter_Logo_Blue.png"></a>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v5.0"></script>
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="15px" data-layout="button" data-action="like" data-size="small" data-share="true">
+      </div>
+    </tr>
+  </table>
+</div>
+
 </div>
 @include('footer')
 </form>
 
 <script>
- $(function() {
-  $('#example1').barrating({
-    theme: 'fontawesome-stars'
-  });
+  $(function raty() {
+     $("#star1").raty({
+          size: 14,
+          starOff: '/img/star-off.png',
+          starOn : '/img/star-on.png',
+          number: 5,
+          score : 3
+     });
 });
-$(function() {
-  $('#example2').barrating({
-    theme: 'fontawesome-stars'
-  });
+$(function raty() {
+     $("#star2").raty({
+          size: 14,
+          starOff: '/img/star-off.png',
+          starOn : '/img/star-on.png',
+          number: 5,
+          score : 3
+     });
 });
-$(function() {
-  $('#example3').barrating({
-    theme: 'fontawesome-stars'
-  });
+$(function raty() {
+     $("#star3").raty({
+          size: 14,
+          starOff: '/img/star-off.png',
+          starOn : '/img/star-on.png',
+          number: 5,
+          score : 3
+     });
 });
-$(function() {
-  $('#example4').barrating({
-    theme: 'fontawesome-stars'
-  });
+$(function raty() {
+     $("#star4").raty({
+          size: 14,
+          starOff: '/img/star-off.png',
+          starOn : '/img/star-on.png',
+          number: 5,
+          score : 3
+     });
 });
+$(function raty() {
+     $("#star5").raty({
+          size: 14,
+          starOff: '/img/star-off.png',
+          starOn : '/img/star-on.png',
+          number: 5,
+          score : 3
+     });
+});
+// $(function raty() {
+//      $("#star5").raty({
+//           size: 14,
+//           starOff: '/img/star-off.png',
+//           starOn : '/img/star-on.png',
+//           number: 5,
+//           score : 3
+//      });
+// });
+
+//  $(function() {
+//   $('#example1').barrating({
+//     theme: 'fontawesome-stars'
+//   });
+// });
+// $(function() {
+//   $('#example2').barrating({
+//     theme: 'fontawesome-stars'
+//   });
+// });
+// $(function() {
+//   $('#example3').barrating({
+//     theme: 'fontawesome-stars'
+//   });
+// });
+// $(function() {
+//   $('#example4').barrating({
+//     theme: 'fontawesome-stars'
+//   });
+// });
 // $(function() {
 //   $('#example5').barrating({
 //     theme: 'fontawesome-stars'
