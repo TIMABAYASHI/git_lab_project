@@ -31,7 +31,7 @@ cursive;
 
 .title {
     width: 80%;
-    margin: 20% 8% 20% 15%;
+    margin: 16% 8% 16% 15%;
 }
 
 .slide img {
@@ -43,14 +43,25 @@ cursive;
     @include btn-1;
     width: 50%;
     height: 25%;
-    margin-top: 20%;
+    margin-top: 15%;
     // color: #2487ff;
 }
 
-.resist {
+.register {
     @include btn-2;
     width: 50%;
-    height: 25%;
-    margin-top: 20%;
-    // color: #2487ff;
+    height: 8%;
+    margin-top: 10%;
+    background-color: #2487ff;
+}
+
+// .resist {
+//     @include btn-2;
+//     width: 50%;
+//     height: 25%;
+//     margin-top: 20%;
+// }
+a {
+    text-decoration: none;
+    color: white;
 }

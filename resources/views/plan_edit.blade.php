@@ -26,8 +26,10 @@
       <h2>▼ 最初にオススメするのはこちら！ ▼</h2>
       <input id="plan_edit" placeholder=""></input>
     <div class="top_box" id="top_box">
+      
       <p class="coment">あなたの性格、年齢、住んでいる場所から<br>
                         診断したおすすめプラン</p>
+                        <a href="{{url('\plan_edit')}}"></a>
       <!-- <img id="proposal_photo" src="../img/IMG_2518.JPG" height="15vh" /> -->
     </div>
 <h4>↑タップで詳細を確認できます</h4>
@@ -52,7 +54,7 @@
         perm_identity
       </i>
         </div>
-
+        @include('footer')
 <script>
 window.onload = function (){
   let num = Math.floor( Math.random() * 4 );
