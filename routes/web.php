@@ -126,7 +126,10 @@ Route::post('/q5', function (Request $request) {
 
 
 
-// // ログイン後のルート
+// セレクト部分のデータ
 
-// serect.blade.phpのデータPOSTのルート
-Route::post('hoge/form', 'HogeController@postHoge');
+    // serect.blade.phpのデータPOSTのルート (所得ページ、どこに)
+    Route::post('select', 'SelectController@index');
+    // データ入力フォーム送信時のルーティング
+    Route::post('select', 'SelectController@receiveData');
+
