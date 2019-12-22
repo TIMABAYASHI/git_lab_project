@@ -38,8 +38,8 @@
         <p class="coment">過去の履歴のなどを確認できます</p>
         <button class="form__btn"><a href="{{url('\mypage')}}">Myページへ</a></button>
         <p class="coment">他の人のプランを閲覧できます</p>
-        <button class="form__btn"><a href="{{url('\plan_post')}}">投稿ページへ</a></button>
-        <div class="footer">
+        <button class="form__btn"><a href="{{url('\board')}}">投稿ページへ</a></button>
+        <!-- <div class="footer">
             <i class="material-icons menu">
         subject
       </i>
@@ -52,9 +52,10 @@
       </i>
             <i class="material-icons myPage">
         perm_identity
-      </i>
+      </i> -->
         </div>
         @include('footer')
+
 <script>
 window.onload = function (){
   let num = Math.floor( Math.random() * 4 );

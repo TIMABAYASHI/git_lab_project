@@ -17,7 +17,11 @@ cursive;
 body {
     width: 100%;
     height: 100%;
-    font: $font-j1;
+    font: $font-e1;
+}
+
+.post__date__1 {
+    width: 5%;
 }
 
 .all__div {
@@ -40,13 +44,40 @@ body {
     border: solid 1px rgba($color: #585858, $alpha: 0.6);
 }
 
+.point {
+    margin: 2% 1% 0 2%;
+    display: flex;
+}
+
+h2 {
+    padding: 3% 1% 0 4%;
+    font-size: medium;
+    color: red;
+    font-weight: 700;
+}
+
+h3 {
+    padding: 3% 2% 0 2%;
+    font-size: medium;
+    color: black;
+    font-weight: 500;
+}
+
+td {
+    margin: 1% 0 1% 0;
+}
+
 // .post__date__1 {
 //     width: 24%;
 // }
-.date__table {
-    width: 100%;
-    // padding: 4% 0 1% 2%;
-    line-height: 1.3;
+// .date__table {
+//     width: 100%;
+//     // padding: 4% 0 1% 2%;
+//     line-height: 1.3;
+// }
+.star {
+    text-align: left;
+    font-size: xx-large;
 }
 
 .name__table {
@@ -57,17 +88,24 @@ body {
 
 .post__title__1 {
     font: $font-j1;
-    width: 10%;
+    width: 25%;
+    margin-top: 2%;
+}
+
+.post__title__2 {
+    font: $font-j1;
+    width: 60%;
     margin-top: 2%;
 }
 
 .sns_box {
     width: 100%;
     display: flex;
+    margin: 1% 0 1% 0;
 }
 
 .twitter-share-button {
-    width: 10vw;
+    // width: 10vw;
     padding-right: 1%;
     padding-top: 1vh;
     // height: 10vh;
@@ -78,13 +116,11 @@ body {
 }
 
 .send__btn {
-    text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: $font-e1;
     color: $base-color1;
-    width: 20%;
-    margin: 0 9% 0 18%;
-    padding-right: 20%;
+    width: 30%;
+    padding-bottom: 0.3vh;
 }
 
 .cancel-on-png,
