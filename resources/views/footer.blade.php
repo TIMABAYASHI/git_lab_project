@@ -1,22 +1,24 @@
 <!-- フッターを入れたいところに、includeする -->
 <div class="footer">
     <div class="igroup">
-        <a href="{{ url('/') }}"><i class="material-icons mi menu">
-            subject
+        <a href="{{ url('/') }}"><i class="material-icons mi home">
+            home
         </i></a>
-        <p>Top</p>
+        <p>home</p>
     </div>
     <div class="igroup">
-        <a href="#"><i class="material-icons mi">
-            publish
+        <a href="{{ url('/board') }}"><i class="material-icons mi post">
+            sms
         </i></a>
-        <p>Search</p>
+        <p>Post</p>
     </div>
     <div class="igroup">
-        <a href="#"><i class="material-icons mi">
-            map
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a href="#">
+            <i class="material-icons mi">
+            share
         </i></a>
-        <p>Like</p>
+        <p>Share</p>
     </div>
     <div class="igroup">
         <a href="{{ url('/mypage') }}"><i class="material-icons mi myPage">
@@ -53,11 +55,12 @@ p{
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
+    bottom: 0px;
+    left:0px;
     width: 100%;
-    height: 7%;
+    height: 8%;
     background-color: #ebebeb;
-    bottom: 0;
     box-shadow: 4px 0 0 0 #6b6b6b;
     display:flex;
     justify-content: space-around;
