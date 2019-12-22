@@ -82,25 +82,25 @@
                             </div>
                         </div>
                         
-                        <div class="form-group{{ $errors->has('bloodtype') ? ' has-error' : '' }}">
-                            <label for="bloodtype" class="col-md-4 control-label">血液型</label>
-                            <div class="col-md-6">
-                                <!-- <input id="bloodtype" type="text" class="form-control" name="bloodtype" value="{{ old('bloodtype') }}" required autofocus> -->
-                                        <select class="form-control" name="bloodtype" id="bloodtype" value="{{ old('bloodtype') }}" required autofocus>
-            <option class="plcholder" value='' disabled selected style='display:none;'></option>
-            <option value="A">A型</option>
-            <option value="O">O型</option>
-            <option value="B">B型</option>
-            <option value="AB">AB型</option>
-        </select>          
+        
 
-                                @if ($errors->has('bloodtype'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('bloodtype') }}</strong>
-                                </span>
-                                @endif
-                            </div>
-                        </div>
+                                        <div class="form-group row">
+                                            <label for="bloodtype" class="col-md-4 col-form-label text-md-right">ち</label>
+
+                                            <div class="col-md-6">
+                                                <input id="bloodtype" type="text" min="1" class="form-control{{ $errors->has('bloodtype') ? ' is-invalid' : '' }}" name="bloodtype" value="{{ old('bloodtype') }}" required>
+
+                                                @if ($errors->has('age'))
+                                                    <span class="invalid-feedback">
+                                                        <strong>{{ $errors->first('age') }}</strong>
+                                                    </span>
+                                                @endif
+                                            </div>
+                                        </div>
+
+
+
+
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">

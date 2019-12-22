@@ -109,7 +109,7 @@
 <!--// 折り畳まれ部分 -->
 </div>
   <div class="bottom">
-    <button class="plan__btn__send" type="submit" name="send">これでOK!</button>
+  <button class="plan__btn__send" type="submit" name="send" onclick="location.href='localhost:8888/plan_edit'">これでOK!</button>
   </div> 
       <!-- </form> -->
 
