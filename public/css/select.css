@@ -1,233 +1,35 @@
-@charset "UTF-8";
-/*-------------- フォント、カラー ----------------*/
-/*-------------- 表題 ----------------*/
-/*-------------- レイアウト ----------------*/
-/*-------------- フォーム ----------------*/
-/*-------------- ボタン ----------------*/
-/*-------------- その他 ----------------*/
-body {
-  width: 100%;
-  height: 100%;
-}
+/*
+Error: Invalid CSS after "  }": expected selector or at-rule, was "}"
+        on line 38 of /Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css/select.scss
 
-.title {
-  color: #24bddc;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-align: center;
-}
+33:     padding-bottom: 20%;
+34:     &__input {
+35:         @include btn-2;
+36:     }
+37:   }
+38: }
+39: 
+40: ul {
+41:     list-style: none;
+42:     display: flex;
+43:     justify-content: space-around;
 
-.question {
-  text-align: center;
-  font-size: 1.2rem;
-  color: gray;
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 10%;
-}
-
-.container {
-  height: 750px;
-  display: flex;
-  align-items: center;
-}
-.container .form-container {
-  background-color: #fff;
-  width: 90%;
-  border-radius: 1.5rem;
-  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-  padding-top: 15%;
-  padding-bottom: 15%;
-  margin: 10% auto;
-  padding-top: 15%;
-}
-
-.form {
-  font-family: "Ubuntu", sans-serif;
-  padding-top: 15%;
-  padding-bottom: 20%;
-}
-.form__input {
-  display: block;
-  width: 60%;
-  height: 10%;
-  color: gray;
-  background: #fff;
-  text-align: center;
-  line-height: 3rem;
-  font-size: 1rem;
-  border: 1px solid gray;
-  border-radius: 1.5rem;
-  transition: 0.5;
-  margin: 10% auto;
-}
-.form__input:hover {
-  background: #76d9e8;
-  border: 1px solid #76d9e8;
-  color: #fff;
-}
-.form__btn {
-  cursor: pointer;
-  border-radius: 4em;
-  text-align: center;
-  color: #fff;
-  background: linear-gradient(to right, #24bddc, #76d9e8);
-  border: 0;
-  font-size: 1em;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-  display: block;
-  width: 40%;
-  padding: 10px 40px;
-  margin: 0 auto;
-  width: 50%;
-}
-.form__btn:hover {
-  color: #24bddc;
-  background: #fff;
-  border: 1px solid #24bddc;
-}
-.form__btn a {
-  color: gray;
-  text-decoration: none;
-  font-family: "Ubuntu", sans-serif;
-}
-.form__btn--checkit {
-  font-size: 1.2rem;
-  color: gray;
-  animation: bowa 0.7s 0s infinite alternate;
-}
-@keyframes bowa {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-  width: 70%;
-  margin: 0 auto;
-  margin-bottom: 20%;
-  padding-bottom: 10%;
-}
-
-.list--now {
-  color: #24bddc;
-  font-size: 2.5rem;
-}
-.list--next {
-  color: #bebebe;
-  font-size: 2.5rem;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: "Helvetica Neue", sans-serif;
-}
-
-body {
-  background-color: #fff;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.radio-tile-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.radio-tile-group .input-container {
-  position: relative;
-  height: 7rem;
-  width: 7rem;
-  margin: 0.5rem;
-  margin-bottom: 20%;
-}
-.radio-tile-group .input-container .radio-button {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  cursor: pointer;
-}
-.radio-tile-group .input-container .radio-tile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #bebebe;
-  border-radius: 5px;
-  padding: 0.5rem;
-  transition: transform 300ms ease;
-}
-.radio-tile-group .input-container .icon {
-  fill: gray;
-  width: 3rem;
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-}
-.radio-tile-group .input-container .radio-tile-label {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #bebebe;
-}
-.radio-tile-group .input-container .radio-button:checked + .radio-tile {
-  background-color: #76d9e8;
-  border: 2px solid #76d9e8;
-  color: white;
-  transform: scale(1.15, 1.15);
-}
-.radio-tile-group .input-container .radio-button:checked + .radio-tile .radio-tile-label {
-  color: white;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  /* 背景カラー */
-  z-index: 9999;
-  /* 一番手前に */
-  pointer-events: none;
-  /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
-  opacity: 0;
-  /* 初期値では非表示 */
-  -webkit-transition: opacity 0.8s ease;
-  /* アニメーション時間は 0.8秒 */
-  -ms-transition: opacity 0.8s ease;
-  -moz-transition: opacity 0.8s ease;
-  transition: opacity 0.8s ease;
-}
-
-/*body要素に.fadeoutセレクタがある場合には、レイヤーが表示されるようにopacityを１に設定します。*/
-body.fadeout::after {
-  opacity: 1;
-}
-
-/*お好みで、.fadeoutセレクタ以下の他の要素にもアニメーション用のCSSを定義します*/
-/*DEMOではページ遷移時にarticle要素のスケールもアニメーションさせています*/
-body.fadeout article {
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-}
+Backtrace:
+/Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css/select.scss:38
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1208:in `expected'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:42:in `parse'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:290:in `render'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:400:in `run'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:22:in `load'
+/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"  }\": expected selector or at-rule, was \"}\"\A         on line 38 of /Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css/select.scss\A \A 33:     padding-bottom: 20%;\A 34:     &__input {\A 35:         @include btn-2;\A 36:     }\A 37:   }\A 38: }\A 39: \A 40: ul {\A 41:     list-style: none;\A 42:     display: flex;\A 43:     justify-content: space-around;"; }
