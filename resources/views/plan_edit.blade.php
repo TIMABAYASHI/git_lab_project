@@ -26,13 +26,13 @@
       <h2>▼ 最初にオススメするのはこちら！ ▼</h2>
       <input id="plan_edit" placeholder=""></input>
     <div class="top_box" id="top_box">
-      
+    <a href="{{url('\plan_see')}}">
       <p class="coment">あなたの性格、年齢、住んでいる場所から<br>
                         診断したおすすめプラン</p>
-                        <a href="{{url('\plan_edit')}}"></a>
+                       
       <!-- <img id="proposal_photo" src="../img/IMG_2518.JPG" height="15vh" /> -->
     </div>
-<h4>↑タップで詳細を確認できます</h4>
+<h4>↑タップで詳細を確認できます</h4> </a>
         <p class="coment">AIによる診断＆提案を希望します</p>
         <button class="form__btn"><a href="{{url('\select')}}">AI診断へ</a></button>
         <p class="coment">過去の履歴のなどを確認できます</p>
