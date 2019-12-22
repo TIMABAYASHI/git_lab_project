@@ -22,7 +22,7 @@ body {
 
 .title {
     @include title-1;
-    margin: ８% auto;
+    margin: 8% auto;
 }
 
 .post__table {
@@ -40,10 +40,13 @@ body {
 .date__table {
     width: 100%;
     padding: 4% 0 1% 2%;
+    line-height: 1.3;
 }
 
 .name__table {
-    padding: 1% 0 1% 1%;
+    padding: 2% 0 1% 1%;
+    margin: 1% 0 1% 0;
+    line-height: 1.3;
 }
 
 .post__title__1 {
