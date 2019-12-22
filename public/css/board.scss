@@ -22,7 +22,7 @@ body {
 
 .title {
     @include title-1;
-    margin: 10% auto;
+    margin: ８% auto;
 }
 
 .post__table {
@@ -57,8 +57,10 @@ body {
     display: flex;
 }
 
-.twitter-share-button img {
+.twitter-share-button {
     width: 10vw;
+    padding-right: 1%;
+    padding-top: 1vh;
     // height: 10vh;
 }
 

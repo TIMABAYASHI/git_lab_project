@@ -1,4 +1,5 @@
 /*-------------- フォント、カラー ----------------*/
+
 // カラー: ベースカラーはグレー、メインカラーはブルー,
 $base-color1: gray;
 $base-color2: #bebebe;
@@ -7,47 +8,54 @@ $main-color1: #24bddc;
 $main-color2: #76d9e8;
 $main-color3: #c7f5f5;
 $white-color: #fff;
-
 // フォント: jは日本語、eは英語
-$font-j1: "Noto Serif JP", serif;
-$font-e1: "Ubuntu", sans-serif;
-$font-e2: "Mansalva", cursive;
+$font-j1: "Noto Serif JP",
+serif;
+$font-e1: "Ubuntu",
+sans-serif;
+$font-e2: "Mansalva",
+cursive;
 
 /*-------------- 表題 ----------------*/
+
 // 各ページの表題(select.bladeなど）
 @mixin title-1 {
-  color: $main-color1;
-  font-family: $font-e1;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-align: center;
+    color: $main-color1;
+    font-family: $font-e1;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
+
 /*-------------- レイアウト ----------------*/
+
 // 親要素に対して中央寄せ
 // *引数($dierction)に x, y, xy いずれかを与える(x：横方向中央寄せ y：縦方向中央寄せ xy：縦横方向中央寄せ)
 // *使用時には親要素にposition: relativeをかける
 @mixin center($direction) {
-  position: absolute;
-  @if $direction==xy {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  } @else if $direction==x {
-    left: 50%;
-    transform: translateX(-50%);
-  } @else if $direction==y {
-    top: 50%;
-    transform: translateY(-50%);
-  }
+    position: absolute;
+    @if $direction==xy {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @else if $direction==x {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @else if $direction==y {
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 // 縦中央寄せにしたい要素の親（container)に対して当てる
 // $heightにcontainerで出したい高さを入れる。
 @mixin container($height) {
-  height: $height;
-  display: flex;
-  align-items: center;
+    height: $height;
+    display: flex;
+    align-items: center;
 }
 
 // 背景設定（画像など）
@@ -55,101 +63,108 @@ $font-e2: "Mansalva", cursive;
 // *引数($fileName)に画像のファイル名を与える
 // ＊mixinを当てる要素のサイズを指定すること
 @mixin background-image($fileName) {
-  $PATH_IMG: "/img/";
-  background-image: url($PATH_IMG+$fileName);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
+    $PATH_IMG: "/img/";
+    background-image: url($PATH_IMG+$fileName);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
 }
 
+
 /*-------------- フォーム ----------------*/
+
 // ログイン画面に搭載のemail,password入力窓
 @mixin input-1 {
-  &::placeholder {
-    color: $base-color2;
-  }
-  width: 76%;
-  color: rgb(38, 50, 56);
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 1px;
-  background: rgba(136, 126, 126, 0.04);
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  box-sizing: border-box;
-  border: 2px solid rgba(0, 0, 0, 0.02);
-  padding: 10px 20px;
-  margin-left: 46px;
-  margin-bottom: 27px;
-  &:focus {
-    border: 2px solid rgba(0, 0, 0, 0.18);
-  }
+    &::placeholder {
+        color: $base-color2;
+    }
+    width: 76%;
+    color: rgb(38, 50, 56);
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    padding: 10px 20px;
+    margin-left: 46px;
+    margin-bottom: 27px;
+    &:focus {
+        border: 2px solid rgba(0, 0, 0, 0.18);
+    }
 }
 
 // select.bladeなどに搭載のgoogle風の外枠（heightと余白はそれぞれ調整要）
 @mixin box-1 {
-  background-color: #fff;
-  width: 90%;
-  border-radius: 1.5rem;
-  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-  padding-top: 15%;
-  padding-bottom: 15%;
-  margin: 10% auto;
+    background-color: #fff;
+    width: 90%;
+    border-radius: 1.5rem;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+    padding-top: 15%;
+    padding-bottom: 15%;
+    margin: 10% auto;
 }
 
+
 /*-------------- ボタン ----------------*/
+
 // ログイン画面に搭載のログインボタン
 @mixin btn-1 {
-  cursor: pointer;
-  border-radius: 4em;
-  text-align: center;
-  color: #fff;
-  background: linear-gradient(to right, $main-color1, $main-color2);
-  border: 0;
-  font-size: 1em;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-  //   transition: all 0.3s;
-  display: block;
-  width: 40%;
-  padding: 10px 40px;
-  margin: 0 auto;
-  &:hover {
-    color: $main-color1;
-    background: $white-color;
-    border: 1px solid $main-color1;
-  }
+    cursor: pointer;
+    border-radius: 4em;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to right, $main-color1, $main-color2);
+    border: 0;
+    font-size: 1em;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    //   transition: all 0.3s;
+    display: block;
+    width: 40%;
+    padding: 10px 40px;
+    margin: 0 auto;
+    &:hover {
+        color: $main-color1;
+        background: $white-color;
+        border: 1px solid $main-color1;
+    }
 }
 
 // select.bladeなどに搭載の２択ボタン
 @mixin btn-2 {
-  display: block;
-  width: 60%;
-  height: 10%;
-  color: $base-color1;
-  background: #fff;
-  text-align: center;
-  line-height: 3rem;
-  font-size: 1rem;
-  border: 1px solid $base-color1;
-  border-radius: 1.5rem;
-  transition: 0.5;
-  margin: 10% auto;
-  &:hover {
-    background: $main-color2;
-    border: 1px solid $main-color2;
-    color: #fff;
-  }
+    display: block;
+    width: 60%;
+    height: 10%;
+    color: $base-color1;
+    background: #fff;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 1rem;
+    border: 1px solid $base-color1;
+    border-radius: 1.5rem;
+    transition: 0.5;
+    margin: 10% auto;
+    &:hover {
+        background: $main-color2;
+        border: 1px solid $main-color2;
+        color: #fff;
+    }
 }
+
+
 /*-------------- その他 ----------------*/
+
 // login.bladeなどに搭載のポリシー等の記述
 @mixin policy {
-  width: 70%;
-  background: $base-color3;
-  color: $base-color1;
-  font-family: $font-j1;
-  line-height: 1.25rem;
-  font-size: 0.8rem;
-  padding: 5%;
-  margin: 15% auto auto;
+    width: 70%;
+    background: $base-color3;
+    color: $base-color1;
+    font-family: $font-j1;
+    line-height: 1.25rem;
+    font-size: 0.8rem;
+    padding: 5%;
+    margin: 15% auto auto;
 }

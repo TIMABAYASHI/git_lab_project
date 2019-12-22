@@ -11,7 +11,7 @@
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
-  margin-top: 20%;
+  margin-top: 10%;
 }
 
 .all__div {
@@ -33,19 +33,19 @@
   width: 85%;
   height: 3%;
   display: flex;
-  margin: 10% 0 5% 7%;
+  margin: 8% 0 5% 7%;
   border-bottom: solid 1px;
 }
 
 .plan__title__h2 {
   font-family: "Ubuntu", sans-serif;
-  width: 26%;
+  width: 25%;
   padding: 1%;
 }
 
 .plan__title {
-  width: 70%;
-  font-size: 20px;
+  width: 77%;
+  font-size: 18px;
   padding-bottom: 0%;
 }
 
@@ -108,6 +108,10 @@
 h3 {
   font-size: 16px;
   height: 20%;
+  text-align: center;
+  margin-top: 7%;
+  color: red;
+  font-weight: 800;
 }
 
 .material-icons.arrow {
@@ -125,6 +129,7 @@ h3 {
 .plan3__name,
 .plan4__name {
   border: rgba(0, 0, 0, 0.7);
+  font-size: 16px;
 }
 
 .open__box {

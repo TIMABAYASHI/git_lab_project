@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="/jquery-2.1.3.min.js"></script>
+    <script src="{{asset('/js/jquery-2.1.3.min.js')}}"></script>
     <!-- fontawesomeの読み込み -->
     <link
       rel="stylesheet"
@@ -51,5 +51,37 @@
       </div>
     </div>
     @include('footer')
+
+    <!-- <section class="page one">
+    <article>
+      <h1>Page One</h1>
+      <a href="{{ url('/plan_see') }}" class="navigate-anchor">Move to Next Page</a>
+    </article>
+  </section> -->
+
+<script>
+    
+
+$(window).on('load', function(){
+  $('body').removeClass('fadeout');
+});
+ 
+$(function() {
+  // ハッシュリンク(#)と別ウィンドウでページを開く場合はスルー
+  $('a:not([href^="#"]):not([target])').on('click', function(e){
+    e.preventDefault(); // ナビゲートをキャンセル
+    url = $(this).attr('href'); // 遷移先のURLを取得
+
+    if (url !== '') {
+      $('body').addClass('fadeout');  // bodyに class="fadeout"を挿入
+      setTimeout(function(){
+        window.location = url; // 0.8秒後に取得したURLに遷移
+        console.log(url);
+      }, 800);
+    }
+    return false;
+  });
+});
+</script>
   </body>
 </html>

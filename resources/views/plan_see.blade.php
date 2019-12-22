@@ -30,6 +30,7 @@
       <h1 class="title">プラン編集</h1>
     </div>
     <!-- <form action=".php" method="POST"> -->
+    <h3> ▼ AIが導き出したあなたにおすすめのプラン ▼</h3>
     <div class="plan__edit">
     <h2 class="plan__title__h2" id="planing">プラン名</h2>
     <input class="plan__title" id="plan_edit" type="text" name="title" value="" placeholder="">
@@ -38,7 +39,7 @@
     <div class="form-container-photo" id="proposal_photo">
 
     <div id="map"></div>
-      <h3></h3>
+      
     
     </div>
   <div class="all__div">

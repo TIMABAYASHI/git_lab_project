@@ -2,7 +2,7 @@
 // @media screen and(min-width: 375px) {
 .title {
     @include title-1;
-    margin-top: 20%;
+    margin-top: 10%;
 }
 
 // カラー
@@ -37,7 +37,7 @@ cursive;
     width: 85%;
     height: 3%;
     display: flex;
-    margin: 10% 0 5% 7%;
+    margin: 8% 0 5% 7%;
     border-bottom: solid 1px;
 }
 
@@ -139,6 +139,10 @@ cursive;
 h3 {
     font-size: 16px;
     height: 20%;
+    text-align: center;
+    margin-top: 7%;
+    color: red;
+    font-weight: 800;
 }
 
 .material-icons.arrow {
@@ -157,6 +161,7 @@ h3 {
 .plan3__name,
 .plan4__name {
     border: rgba($color: #000000, $alpha: 0.7);
+    font-size: 16px;
 }
 
 .open__box {
