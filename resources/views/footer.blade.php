@@ -1,10 +1,10 @@
 <!-- フッターを入れたいところに、includeする -->
 <div class="footer">
     <div class="igroup">
-        <a href="./top.blade.php"><i class="material-icons mi menu">
+        <a href="{{ url('/') }}"><i class="material-icons mi menu">
             subject
         </i></a>
-        <p>Home</p>
+        <p>Top</p>
     </div>
     <div class="igroup">
         <a href="#"><i class="material-icons mi">
@@ -19,7 +19,7 @@
         <p>Like</p>
     </div>
     <div class="igroup">
-        <a href="./mypage.blade.php"><i class="material-icons mi myPage">
+        <a href="{{ url('/mypage') }}"><i class="material-icons mi myPage">
             perm_identity
         </i></a>
         <p>My page</p>
@@ -32,14 +32,14 @@ a {
 }
 
 p{
-    font-size: 12px;
+    font-size: 10px;
     color:gray;
     text-align: center;
 }
 
     .mi {
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     margin: 2% 2% auto;
     color: rgba(0, 0, 0, 0.4);
 }
@@ -55,7 +55,7 @@ p{
 .footer {
     position: absolute;
     width: 100%;
-    height: 8.5%;
+    height: 7%;
     background-color: #ebebeb;
     bottom: 0;
     box-shadow: 4px 0 0 0 #6b6b6b;

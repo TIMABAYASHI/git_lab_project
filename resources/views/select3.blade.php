@@ -34,22 +34,33 @@
               <li><i class="material-icons list--next" >looks_4</i></li>
               <li><i class="material-icons list--next" >looks_5</i></li>
           </ul> 
-          <!-- </div> -->
         <h1 class="title">どっちの気分？</h1>
-        <!-- <h2 class="question">どっちの気分？</h2> -->
-        <form class="form" method="post" action="#">
-          <button class="form__input" type="submit" name="q8" value="0">
-            和食で決まり！
-          </button>
-          <button class="form__input" type="submit" name="q8" value="1">
-            洋食がいい！
-          </button>
-          <!-- <input class="form__btn" type="submit" value="Send" /> -->
-          <button class="form__btn"><a href="{{ url('/select4') }}"> Next</a><button>
+      <form class="form" method="post" action="#">
+        <div class="radio-tile-group">
+          <div class="input-container">
+            <input id="japanese" class="radio-button" type="radio" name="q8" value="0" />
+            <div class="radio-tile">
+              <div class="icon">
+                <i class="material-icons list--now">compass_calibration</i>
+              </div>
+              <label for="japanese" class="radio-tile-label">和食</label>
+            </div>
+          </div>
 
-        </form>
-      </div>
+          <div class="input-container">
+            <input id="western" class="radio-button" type="radio" name="q8" value="1" />
+            <div class="radio-tile">
+              <div class="icon">
+                <i class="material-icons list--now" >restaurant</i>
+              </div>
+              <label for="western" class="radio-tile-label">洋食</label>
+            </div>
+          </div>
+          <button class="form__btn" type="submit">Next<button>        
+        </div>
+      </form>
     </div>
+  </div>
     @include('footer')
   </body>
 </html>

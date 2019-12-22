@@ -67,7 +67,7 @@ body {
 // 一番大きな枠
 .containerb {
   @include container(812px);
-  @include background-image("date6.jpg");
+  @include background-image("date5.jpg");
   justify-content: center;
   width: 100%;
   z-index: -1;

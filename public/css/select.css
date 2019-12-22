@@ -92,7 +92,19 @@ body {
   text-decoration: none;
   font-family: "Ubuntu", sans-serif;
 }
-
+.form__btn--checkit {
+  font-size: 1.2rem;
+  color: gray;
+  animation: bowa 0.7s 0s infinite alternate;
+}
+@keyframes bowa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 ul {
   list-style: none;
   display: flex;
@@ -110,4 +122,78 @@ ul {
 .list--next {
   color: #bebebe;
   font-size: 2.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radio-tile-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.radio-tile-group .input-container {
+  position: relative;
+  height: 7rem;
+  width: 7rem;
+  margin: 0.5rem;
+  margin-bottom: 20%;
+}
+.radio-tile-group .input-container .radio-button {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+.radio-tile-group .input-container .radio-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #bebebe;
+  border-radius: 5px;
+  padding: 0.5rem;
+  transition: transform 300ms ease;
+}
+.radio-tile-group .input-container .icon {
+  fill: gray;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.radio-tile-group .input-container .radio-tile-label {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #bebebe;
+}
+.radio-tile-group .input-container .radio-button:checked + .radio-tile {
+  background-color: #76d9e8;
+  border: 2px solid #76d9e8;
+  color: white;
+  transform: scale(1.15, 1.15);
+}
+.radio-tile-group .input-container .radio-button:checked + .radio-tile .radio-tile-label {
+  color: white;
 }
