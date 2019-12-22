@@ -1,4 +1,5 @@
 /*-------------- フォント、カラー ----------------*/
+
 // カラー: ベースカラーはグレー、メインカラーはブルー,
 $base-color1: gray;
 $base-color2: #bebebe;
@@ -7,13 +8,13 @@ $main-color1: #24bddc;
 $main-color2: #76d9e8;
 $main-color3: #c7f5f5;
 $white-color: #fff;
-
 // フォント: jは日本語、eは英語
 $font-j1: "Noto Serif JP", serif;
 $font-e1: "Ubuntu", sans-serif;
 $font-e2: "Mansalva", cursive;
 
 /*-------------- 表題 ----------------*/
+
 // 各ページの表題(select.bladeなど）
 @mixin title-1 {
   color: $main-color1;
@@ -24,6 +25,7 @@ $font-e2: "Mansalva", cursive;
 }
 
 /*-------------- レイアウト ----------------*/
+
 // 親要素に対して中央寄せ
 // *引数($dierction)に x, y, xy いずれかを与える(x：横方向中央寄せ y：縦方向中央寄せ xy：縦横方向中央寄せ)
 // *使用時には親要素にposition: relativeをかける
@@ -42,7 +44,7 @@ $font-e2: "Mansalva", cursive;
   }
 }
 
-// 縦中央寄せにしたい要素の親（container)に対して当てる
+// 縦中央寄せにしたい子要素の親（container)に対して当てる
 // $heightにcontainerで出したい高さを入れる。
 @mixin container($height) {
   height: $height;
@@ -63,6 +65,7 @@ $font-e2: "Mansalva", cursive;
 }
 
 /*-------------- フォーム ----------------*/
+
 // ログイン画面に搭載のemail,password入力窓
 @mixin input-1 {
   &::placeholder {
@@ -99,6 +102,7 @@ $font-e2: "Mansalva", cursive;
 }
 
 /*-------------- ボタン ----------------*/
+
 // ログイン画面に搭載のログインボタン
 @mixin btn-1 {
   cursor: pointer;
@@ -141,7 +145,9 @@ $font-e2: "Mansalva", cursive;
     color: #fff;
   }
 }
+
 /*-------------- その他 ----------------*/
+
 // login.bladeなどに搭載のポリシー等の記述
 @mixin policy {
   width: 70%;

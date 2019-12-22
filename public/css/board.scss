@@ -20,30 +20,39 @@ body {
     font: $font-j1;
 }
 
+.all__div {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll;
+}
+
 .title {
     @include title-1;
-    margin: 10% auto;
+    margin: 8% auto;
 }
 
 .post__table {
     width: 100%;
-    height: 15%;
+    // height: 25%;
     // margin-top: 5%;
     font-size: large;
     border: solid 1px rgba($color: #585858, $alpha: 0.6);
 }
 
-.post__date__1 {
-    width: 24%;
-}
-
+// .post__date__1 {
+//     width: 24%;
+// }
 .date__table {
     width: 100%;
-    padding: 4% 0 1% 2%;
+    // padding: 4% 0 1% 2%;
+    line-height: 1.3;
 }
 
 .name__table {
-    padding: 1% 0 1% 1%;
+    padding: 2% 0 1% 1%;
+    margin: 1% 0 1% 0;
+    line-height: 1.3;
 }
 
 .post__title__1 {
@@ -57,8 +66,10 @@ body {
     display: flex;
 }
 
-.twitter-share-button img {
+.twitter-share-button {
     width: 10vw;
+    padding-right: 1%;
+    padding-top: 1vh;
     // height: 10vh;
 }
 
@@ -74,4 +85,63 @@ body {
     width: 20%;
     margin: 0 9% 0 18%;
     padding-right: 20%;
+}
+
+.cancel-on-png,
+.cancel-off-png,
+.star-on-png,
+.star-off-png,
+.star-half-png {
+    font-size: 2em;
+}
+
+@font-face {
+    font-family: "raty";
+    font-style: normal;
+    font-weight: normal;
+    src: url("./fonts/raty.eot");
+    src: url("./fonts/raty.eot?#iefix") format("embedded-opentype");
+    src: url("./fonts/raty.svg#raty") format("svg");
+    src: url("./fonts/raty.ttf") format("truetype");
+    src: url("./fonts/raty.woff") format("woff");
+}
+
+.cancel-on-png,
+.cancel-off-png,
+.star-on-png,
+.star-off-png,
+.star-half-png {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-family: "raty";
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    speak: none;
+    text-transform: none;
+}
+
+.cancel-on-png:before {
+    content: "\e600";
+}
+
+.cancel-off-png:before {
+    content: "\e601";
+}
+
+.star-on-png:before {
+    content: "\f005";
+}
+
+.star-off-png:before {
+    content: "\f006";
+}
+
+.star-half-png:before {
+    content: "\f123";
+}
+
+.br-theme-fontawesome-stars .br-widget a {
+    font-size: 5rem;
 }

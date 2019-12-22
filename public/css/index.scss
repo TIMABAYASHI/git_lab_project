@@ -10,16 +10,17 @@
   }
 }
 
-ログイン画面の写真 .container {
-  @include container(600px);
-  @include background-image("date6.jpg");
-}
+// // ログイン画面の写真
+// .container {
+//   @include container(812px);
+//   @include background-image("date6.jpg");
+// }
 
-// ログアウト画面の写真
-.container2 {
-  @extend .container;
-  @include background-image("date5.jpg");
-}
+// // ログアウト画面の写真
+// .container2 {
+//   @extend .container;
+//   @include background-image("date5.jpg");
+// }
 
 .form-container {
   @include box-1;
@@ -52,5 +53,44 @@
 
 .policy {
   @include policy;
+}
+
+// ブートストラップ当てたあと
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $font-e1;
+}
+
+// 一番大きな枠
+.containerb {
+  @include container(812px);
+  @include background-image("date5.jpg");
+  justify-content: center;
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  top: 0px;
+  margin: 0;
+}
+
+.panel-headingb {
+  padding-top: 10%;
+  @include title-1;
+}
+
+// ログインのボックス
+.row {
+  @include box-1;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+// ログインのボタン
+.btnlogin {
+  @include btn-1;
+  text-align: center;
+  padding: 2%;
 }
 // }

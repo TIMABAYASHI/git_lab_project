@@ -1,9 +1,8 @@
 @import "_base.scss";
-
 // @media screen and(min-width: 375px) {
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 .title {
@@ -20,20 +19,49 @@ body {
 }
 
 .container {
-  @include container(750px);
+  height: 93%;
+  // @include container(100%);
   .form-container {
     @include box-1;
     padding-top: 15%;
+    height: 80vh;
   }
 }
 
 .form {
+  position: relative;
   font-family: $font-e1;
   // margin-top: 5%;
   padding-top: 15%;
   padding-bottom: 20%;
+  .radio-tile-group {
+    position: absolute;
+    top: 20%;
+  }
   &__input {
     @include btn-2;
+  }
+  &__btn {
+    @include btn-1;
+    width: 50%;
+    & a {
+      color: gray;
+      text-decoration: none;
+      font-family: $font-e1;
+    }
+    &--checkit {
+      font-size: 1.2rem;
+      color: gray;
+      @keyframes bowa {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      animation: bowa 0.7s 0s infinite alternate;
+    }
   }
 }
 
@@ -55,5 +83,129 @@ ul {
   &--next {
     color: $base-color2;
     font-size: 2.5rem;
+  }
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  /* 背景カラー */
+  z-index: 9999;
+  /* 一番手前に */
+  pointer-events: none;
+  /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
+  opacity: 0;
+  /* 初期値では非表示 */
+  -webkit-transition: opacity 0.8s ease;
+  /* アニメーション時間は 0.8秒 */
+  -ms-transition: opacity 0.8s ease;
+  -moz-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+/*body要素に.fadeoutセレクタがある場合には、レイヤーが表示されるようにopacityを１に設定します。*/
+
+body.fadeout::after {
+  opacity: 1;
+}
+
+/*お好みで、.fadeoutセレクタ以下の他の要素にもアニメーション用のCSSを定義します*/
+
+/*DEMOではページ遷移時にarticle要素のスケールもアニメーションさせています*/
+
+body.fadeout article {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+// アイコン
+* {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+$primary-color: $base-color2;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.radio-tile-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  //set dimensions for invisible container
+  .input-container {
+    position: relative;
+    height: 7rem;
+    width: 7rem;
+    margin: 0.5rem;
+    margin-bottom: 20%;
+
+    //make actual radio input invisible
+    // + stretch to fill container
+    .radio-button {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      cursor: pointer;
+    }
+
+    //default tile styles
+    .radio-tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $primary-color;
+      border-radius: 5px;
+      padding: 0.5rem;
+      transition: transform 300ms ease;
+    }
+    .icon {
+      fill: $base-color1;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .radio-tile-label {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: $primary-color;
+    }
+
+    //active tile styles
+    .radio-button:checked + .radio-tile {
+      background-color: $main-color2;
+      border: 2px solid $main-color2;
+      color: white;
+      transform: scale(1.15, 1.15);
+      .radio-tile-label {
+        color: white;
+      }
+    }
   }
 }

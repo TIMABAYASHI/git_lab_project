@@ -1,25 +1,27 @@
 <!-- フッターを入れたいところに、includeする -->
 <div class="footer">
     <div class="igroup">
-        <a href="./top.blade.php"><i class="material-icons mi menu">
-            subject
+        <a href="{{ url('/') }}"><i class="material-icons mi home">
+            home
         </i></a>
-        <p>Home</p>
+        <p>home</p>
     </div>
     <div class="igroup">
-        <a href="#"><i class="material-icons mi">
-            publish
+        <a href="{{ url('/board') }}"><i class="material-icons mi post">
+            sms
         </i></a>
-        <p>Search</p>
+        <p>Post</p>
     </div>
     <div class="igroup">
-        <a href="#"><i class="material-icons mi">
-            map
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <a href="#">
+            <i class="material-icons mi">
+            share
         </i></a>
-        <p>Like</p>
+        <p>Share</p>
     </div>
     <div class="igroup">
-        <a href="./mypage.blade.php"><i class="material-icons mi myPage">
+        <a href="{{ url('/mypage') }}"><i class="material-icons mi myPage">
             perm_identity
         </i></a>
         <p>My page</p>
@@ -32,14 +34,14 @@ a {
 }
 
 p{
-    font-size: 12px;
+    font-size: 10px;
     color:gray;
     text-align: center;
 }
 
     .mi {
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     margin: 2% 2% auto;
     color: rgba(0, 0, 0, 0.4);
 }
@@ -53,11 +55,12 @@ p{
 }
 
 .footer {
-    position: absolute;
+    position: fixed;
+    bottom: 0px;
+    left:0px;
     width: 100%;
-    height: 8.5%;
+    height: 8%;
     background-color: #ebebeb;
-    bottom: 0;
     box-shadow: 4px 0 0 0 #6b6b6b;
     display:flex;
     justify-content: space-around;

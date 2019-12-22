@@ -1,11 +1,17 @@
 @extends('layouts.app')
 
+@section('css')
+{{-- この場所に画面毎のcssを記述する --}}    
+<link rel="stylesheet" href="{{asset('/css/reset.css')}}" />
+ <link rel="stylesheet" href="{{asset('/css/resist.css')}}" />
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">会員登録</div>
+            <div class="panel panel-default panel-defaultb">
+                <div class="panel-headingb">会員登録</div>
 
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
@@ -54,7 +60,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+                            <label for="password-confirm" class="col-md-4 control-label">Password確認</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
@@ -98,7 +104,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary btnsubmit">
                                     Submit
                                 </button>
                             </div>

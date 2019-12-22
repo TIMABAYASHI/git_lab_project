@@ -36,7 +36,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="../../public/js/jquery-2.1.3.min.js"></script>
+    <script src="{{asset('/js/jquery-2.1.3.min.js')}}"></script>
     <!-- fontawesomeの読み込み -->
     <link
       rel="stylesheet"
@@ -47,8 +47,8 @@
     <!-- Google fontsの読みこみ -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Arapey|Mansalva|Nothing+You+Could+Do|Noto+Serif+JP|Shadows+Into+Light|Ubuntu&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="../../public/css/reset.css" />
-    <link rel="stylesheet" href="../../public/css/plan_post.css" />
+    <link rel="stylesheet" href="{{asset('/css/reset.css')}}" />
+    <link rel="stylesheet" href="{{asset('/css/plan_post.css')}}" />
     <style>
       /* #map { height: 100%; width: 100%} */
     </style>
@@ -67,7 +67,7 @@
         <th>天気</th>
         <th>映像</th>
     </tr>
-    <div class="container jumbotron"><?=$view?></div>
+    
 </table> -->
 
 
@@ -77,7 +77,7 @@
     <!-- <form action=".php" method="POST"> -->
     <div class="plan__edit">
     <h2 class="plan__title__h2" id="plan_edit">プラン名</h2>
-    <p class="plan__title" type="text" name="title" value=""><?=$name?></p>
+    <p class="plan__title" type="text" name="title" value=""></p>
     </div>
   
   <div class="all__div">
@@ -86,8 +86,8 @@
     </div>
     <div class="plan1">
     <div class="plan1__1">
-      <input class="plan1__time__input" id="plan1_input" type="time" name="time" value="<?$time?>">
-      <p class="plan1__name" id="plan_name1"  placeholder="" value=""><?=$place?></input>
+      <input class="plan1__time__input" id="plan1_input" type="time" name="time" value="">
+      <p class="plan1__name" id="plan_name1"  placeholder="" value=""></input>
       
       </div>
       <div class="plan1__2">
@@ -97,8 +97,8 @@
     </div>
     <div class="plan2">
     <div class="plan2__1">
-      <input class="plan2__time__input" id="plan2_input" type="time" name="time" value="<?=$time?>">
-      <p class="plan2__name" id="plan_name2"  placeholder="" value=""><?=$place?></p>
+      <input class="plan2__time__input" id="plan2_input" type="time" name="time" value="">
+      <p class="plan2__name" id="plan_name2"  placeholder="" value=""></p>
       
     </div>  
       <i class="material-icons arrow">arrow_downward</i>
@@ -106,8 +106,8 @@
     </div>
     <div class="plan3">
       <div class="plan3__1">
-        <input class="plan3__time__input" id="plan3_input"  type="time" name="time" value="<?=$time?>">
-        <p class="plan3__name" id="plan_name3" placeholder="" value=""><?=$place?></p>
+        <input class="plan3__time__input" id="plan3_input"  type="time" name="time" value="">
+        <p class="plan3__name" id="plan_name3" placeholder="" value=""></p>
         
       </div>
       <i class="material-icons arrow">arrow_downward</i>
@@ -123,7 +123,7 @@
     <button class="plan__btn__send" type="submit" name="send">このプランを共有する</button>
     <button class="plan__btn__back" name="back"><a href="./plan_see.blade.php">考え直す</a></button>
 </div> 
-
+@include('footer')
 
 
 </body>
