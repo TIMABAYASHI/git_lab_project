@@ -6,14 +6,15 @@
 // @media screen and(min-width: 375px) {
 .title {
     @include title-1;
-    margin-top: 15%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 // カラー
 $color1: #bebebe;
 // フォント
-$font1: "Noto Serif JP",
-serif;
+$font1: "Ubuntu",
+sans-serif;
 $font2: "Ubuntu",
 sans-serif;
 $font3: "Mansalva",
@@ -64,37 +65,47 @@ body {
     }
 }
 
-.comment__p {
+.comment {
+    font-family: $font1;
     width: 100%;
-    font-size: 20px;
+    font-size: 22px;
     text-align: center;
     margin: 10% 0 5% 0;
 }
 
+h2 {
+    font-family: $font1;
+    font-size: 20px;
+    text-align: center;
+}
+
 h3 {
-    font: $font2;
+    font-family: $font1;
+    color: red;
     font-size: 22px;
     padding-bottom: 3%;
 }
 
 h4,
 h5 {
+    font-family: $font1;
     width: 100%;
     font-size: 18px;
-    font: $font2;
+    padding-top: 2%;
     padding-bottom: 2%;
 }
 
 .form-container {
     width: 100%;
-    height: 300vh;
+    height: 30vh;
+    margin-bottom: 10%;
 }
 
 .form-container img {
     width: 100%;
-    height: 8%;
+    height: 100%;
     text-align: center;
-    margin: 0 auto;
+    margin-bottom: 10%;
     background-color: #bebebe;
     object-fit: cover;
 }
@@ -103,25 +114,30 @@ h5 {
     margin-top: 5%;
 }
 
-.form {
-    &__btn {
-        width: 50%;
-        height: 30%;
-        color: #fff;
-        border-radius: 3px;
-        display: inline-block;
-        margin: 0 25% 0 25%;
-        // transition: all 0.3s ease 0s;
-        text-transform: uppercase;
-        font-family: $font2;
-        font-size: 16px;
-        font-weight: 700;
-        &:hover {
-            background-color: white;
-            border: 1px solid #326295;
-            color: #326295;
-        }
-    }
+.form__btn {
+    @include btn-1;
+    width: 50%;
+    height: 6%;
+    margin: 6% 20% 6% 24%;
+    // color: #fff;
+    // border-radius: 3px;
+    // display: inline-block;
+    // margin: 0 25% 0 25%;
+    // // transition: all 0.3s ease 0s;
+    // text-transform: uppercase;
+    // font-family: $font2;
+    // font-size: 16px;
+    // font-weight: 700;
+    // &:hover {
+    //     background-color: white;
+    //     border: 1px solid #326295;
+    //     color: #326295;
+    // }
+}
+
+a {
+    text-decoration: none;
+    color: rgb(128, 128, 128);
 }
 
 .footer {
@@ -132,26 +148,6 @@ h5 {
     position: absolute;
     bottom: 0;
     box-shadow: 4px 0 0 0 #6b6b6b;
-}
-
-.form__btn {
-    display: block;
-    width: 60%;
-    height: 6vh;
-    color: $base-color1;
-    background: #fff;
-    text-align: center;
-    line-height: 3rem;
-    font-size: 1rem;
-    border: 1px solid $base-color1;
-    border-radius: 1.4rem;
-    transition: 0.5;
-    margin: 3vh auto;
-    &:hover {
-        background: $main-color2;
-        border: 1px solid $main-color2;
-        color: #fff;
-    }
 }
 
 // }

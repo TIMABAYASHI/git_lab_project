@@ -20,11 +20,10 @@
 <body>
 <h1 class="title">yutoさんのページ</h1>
   <div class="display">
-    <h2 class="comment__p">プラン一覧</h2>
 
-    <p class="coment">AIによる診断＆提案を希望します</p>
+    <h2>AIによる診断 & 提案を行う</h2>
         <button class="form__btn"><a href="{{url('\select')}}">AI診断へ</a></button>
-    
+        <h2 class="comment">プラン一覧</h2>
     <div class="search__box">
 
     <input class="input-container__search" type="search" name="search" placeholder="プラン検索">
@@ -34,25 +33,43 @@
     </form>
   </div>
 
-  <h3>< 現在予約中のプラン ></h3>
-  <h4>日付　：１２月２４日　９：００</h4>
+  <h3>< 現在予定中のプラン ></h3>
+  <h4>日付　：１２月２４日　２１：００</h4>
   <h5>プラン名：お洒落な横浜で決めるぜプラン</h5>
   <div class="form-container" id="proposal_photo">
   <a href="plan_see.blade.php">  <img id="proposal_photo" src="/img/p_yokohama.jpg" /></a>
 
   <h3 class="past">< 過去のプラン履歴 ></h3>
+  <h4>日付　：１２月２０日　９：００</h4>
+  <h5>プラン名：ミッキーとふれあいプラン</h5>
     <div class="form-container" id="proposal_photo">
-        <img id="proposal_photo" src="../img/IMG_2518.JPG" />
+        <img id="proposal_photo" src="/img/mickey.jpg" />
     </div>
+    <h4>日付　：１２月１日　９：００</h4>
+  <h5>プラン名：ミッキーとふれあいプラン</h5>
     <div class="form-container" id="proposal_photo">
-        <img id="proposal_photo" src="../img/IMG_2518.JPG" />
+        <img id="proposal_photo" src="/img/mickey.jpg" />
     </div>
+    <h4>日付　：１１月１０日　９：００</h4>
+  <h5>プラン名：ミッキーとふれあいプラン</h5>
     <div class="form-container" id="proposal_photo">
-        <img id="proposal_photo" src="../img/IMG_2518.JPG" />
+        <img id="proposal_photo" src="/img/mekakushi.jpg" />
     </div>
-    
+      
+    <h4>日付　：１０月２日　９：００</h4>
+    <h5>プラン名：ミッキーとふれあいプラン</h5>
     <div class="form-container" id="proposal_photo">
-        <img id="proposal_photo" src="../img/IMG_2518.JPG" />
+        <img id="proposal_photo" src="/img/mickey.jpg" />
+    </div>
+    <h4>日付　：９月２０日　９：００</h4>
+    <h5>プラン名：ミッキーとふれあいプラン</h5>
+    <div class="form-container" id="proposal_photo">
+        <img id="proposal_photo" src="/img/mickey.jpg" />
+    </div>
+    <h4>日付　：９月９日　９：００</h4>
+    <h5>プラン名：ミッキーとふれあいプラン</h5>
+    <div class="form-container" id="proposal_photo">
+        <img id="proposal_photo" src="/img/2525e7c1.jpg" />
     </div>
 </div>
     @include('footer')
