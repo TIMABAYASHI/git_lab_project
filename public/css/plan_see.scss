@@ -2,7 +2,7 @@
 // @media screen and(min-width: 375px) {
 .title {
     @include title-1;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 // カラー
@@ -23,6 +23,15 @@ cursive;
     width: 100%;
     height: 80vh;
     overflow-y: scroll;
+}
+
+.material-icons.back {
+    font-size: 50px;
+    // margin: 1% 6% 1% 1%;
+    color: rgba($color: #000000, $alpha: 0.4);
+    &.back {
+        // margin-top: 6% 4% 1% 3%;
+    }
 }
 
 .form-container-photo {
@@ -174,18 +183,26 @@ h3 {
     margin: 0 auto;
 }
 
+.bottom {
+    width: 100%;
+    height: 9%;
+    background-color: white;
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+}
+
 .plan__btn__send {
     @include btn-1;
-    width: 55%;
+    padding: 0 auto;
+    // border-radius: 5px;
+    width: 35%;
     margin: 0 20% 6% 23%;
     position: fixed;
     bottom: 0;
 }
 
-.bottom {
-    width: 100%;
-    height: 9%;
-    background-color: white;
-    position: fixed;
-    bottom: 0px;
+a {
+    text-decoration: none;
+    color: rgb(128, 128, 128);
 }

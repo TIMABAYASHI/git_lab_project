@@ -1,34 +1,3 @@
-<?php
-// session_start();
-// include("funcs1.php");
-// chkSsid();
-// $pdo = db_conn();
-
-// // $life_flg = $_POST["life_flg"];
-
-// //２．データ登録SQL作成
-// $stmt = $pdo->prepare("SELECT * FROM plans");
-// $status = $stmt->execute();
-
-// $view="";
-// if($status==false) {
-//   sql_error($stmt);
-// }else{
-//   while( $r = $stmt->fetch(PDO::FETCH_ASSOC)){
-//     $view .= '<p>';
-//     $view .= '<a href="plan_see.blade.php?id='.$r["id"].'">';
-//     $view .= "<tr>"."<td>".$r["date"]."</td>"."<td>".$r["name"]."</td>"."<td>".$r["time"]."</td>"."<td>".$r["place"]."<td>".'<img src="upload/'.$r["photo"].'"width="100">'."</<td>"."<br>";
-//     $view .= '</a> ';
-//     // if($_SESSION["kanri_flg"]=="1"){
-//     //   $view .= "<td>".'<a href="delete2.php?id='.$r["id"].'">';
-//     //   $view .= "[削除]";
-//     //   $view .= '</a></td></tr>';
-//     //   $view .= '</p>';
-//     // }
-//     $view .= '</img>';
-//   }
-// }
-?>
 
 <!DOCTYPE html>
 <html lang="jp">
@@ -57,18 +26,6 @@
 
 <body>
 
-
-<!-- <table id="gameList">
-    <tr>
-        <th>日付</th>
-        <th>大会名</th>
-        <th>対戦カード</th>
-        <th>スタジアム名</th>
-        <th>天気</th>
-        <th>映像</th>
-    </tr>
-    
-</table> -->
 
 
 <div class="form-container">

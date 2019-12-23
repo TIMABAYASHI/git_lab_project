@@ -14,10 +14,21 @@
 
 
 @section('content')
+
+<!DOCTYPE html>
+<html lang="jp">
 <div class="container">
     <div class="row" id="r1" style="visibility:visible;">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default panel-defaultb">
+    <script src="{{('/js/jquery-2.1.3.min.js')}}"></script>
+    <!-- fontawesomeの読み込み -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    <!-- Google fontsの読みこみ -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Arapey|Mansalva|Nothing+You+Could+Do|Noto+Serif+JP|Shadows+Into+Light|Ubuntu&display=swap" rel="stylesheet" />
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+    <title></title>
                 <div class="panel-headingb">会員登録</div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
