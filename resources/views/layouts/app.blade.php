@@ -22,6 +22,9 @@
       rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
 
+    <!-- ファビコン -->
+    <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">
+
 
 </head>
 <body>
