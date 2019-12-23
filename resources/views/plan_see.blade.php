@@ -25,7 +25,9 @@
   </head>
 
 <body onlord="start()">
-  
+<i class="material-icons back"><a href="{{url('\home')}}">
+      keyboard_arrow_left
+    </a></i>
     <div class="form-container">
       <h1 class="title">プラン編集</h1>
     </div>
@@ -110,6 +112,7 @@
 </div>
   <div class="bottom">
   <a class="plan__btn__send" type="submit" name="send" href="{{ url('/plan_post') }}">これでOK!</a>
+  <!-- <a class="plan__btn__send1" type="submit" name="send" href="{{ url('/select') }}">んーもう１回</a> -->
   </div> 
       <!-- </form> -->
 
