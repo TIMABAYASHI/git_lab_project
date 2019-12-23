@@ -46,18 +46,15 @@ Route::get('/board', function () {
     return view('board');
 });
 
-// 7.maipe-ji
-Route::get('/mypage', function () {
-    return view('mypage');
-});
+
 // 7.serekuto
 Route::get('/select', function () {
     return view('select');
 });
 
-// // ログイン周り+メインページのルート
-// Auth::routes();
-// Route::get('/home', 'HomeController@index')->name('home');
+// ログイン周り+メインページのルート
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 
 // // データベースにPOSTする
 // Route::post('/q1', function (Request $request) {

@@ -155,7 +155,7 @@
                             <input class="q-container__input" type="radio" name="q5" id="warm" value="1">
                             <label for="warm" class="label">ハートでしょ</label>
                         </div>
-                        <input class="form__input__btn" type="submit" name="send" value="Send">
+                        <button class="form__input__btn" name="send"><a href="{{url('\home')}}">Send</a></button>
                     </form>
                 </div>
             </div>

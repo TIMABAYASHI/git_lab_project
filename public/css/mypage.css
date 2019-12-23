@@ -1,68 +1,99 @@
-/*
-Error: Undefined mixin 'title'.
-        on line 8 of /Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css/mypage.scss, in `title'
-        from line 8 of /Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css/mypage.scss
+@charset "UTF-8";
+/*Base*/
+/*-------------- フォント、カラー ----------------*/
+/*-------------- 表題 ----------------*/
+/*-------------- レイアウト ----------------*/
+/*-------------- フォーム ----------------*/
+/*-------------- ボタン ----------------*/
+/*-------------- その他 ----------------*/
+.title {
+  color: #24bddc;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 20%;
+}
 
-3: /*Base*\/
-4: 
-5: @import "_base.scss";
-6: // @media screen and(min-width: 375px) {
-7: .title {
-8:     @include title;
-9:     margin-top: 20%;
-10: }
-11: 
-12: // カラー
-13: $color1: #bebebe;
+/*Base*/
+body {
+  font-family: "Noto Serif JP", serif;
+}
 
-Backtrace:
-/Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css/mypage.scss:8:in `title'
-/Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css/mypage.scss:8
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `with_mixin'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:20:in `render'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:290:in `render'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:400:in `run'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
-/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:22:in `load'
-/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined mixin 'title'.\A         on line 8 of /Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css/mypage.scss, in `title'\A         from line 8 of /Applications/MAMP/htdocs/team_berg/laravel/git_lab_project/public/css/mypage.scss\A \A 3: /*Base*/\A 4: \A 5: @import \"_base.scss\";\A 6: // @media screen and(min-width: 375px) {\A 7: .title {\A 8:     @include title;\A 9:     margin-top: 20%;\A 10: }\A 11: \A 12: // カラー\A 13: $color1: #bebebe;"; }
+.display {
+  width: 100%;
+  height: 800px;
+  overflow-y: scroll;
+}
+
+.search__box {
+  display: flex;
+  width: 100%;
+  height: 20%;
+}
+
+.input-container__search {
+  width: 60%;
+  height: 10%;
+  font-size: large;
+  margin-bottom: 5%;
+  border: solid 1px rgba(117, 117, 117, 0.4);
+}
+
+.comment__p {
+  width: 100%;
+  font-size: 15px;
+  text-align: center;
+  margin: 10% 0 5% 0;
+}
+
+.form-container img {
+  width: 100%;
+  height: 8%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #bebebe;
+}
+
+.form__btn {
+  width: 50%;
+  height: 30%;
+  color: #fff;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 25% 0 25%;
+  text-transform: uppercase;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.form__btn:hover {
+  background-color: white;
+  border: 1px solid #326295;
+  color: #326295;
+}
+
+.material-icons {
+  font-size: 50px;
+  margin: 1% 6% 1% 6%;
+  color: rgba(0, 0, 0, 0.4);
+}
+.material-icons.back {
+  margin-top: 8% 4% 1% 5%;
+}
+.material-icons.search {
+  font-size: 30px;
+}
+.material-icons.voice {
+  font-size: 30px;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  height: 8%;
+  background-color: #c5c5c5;
+  position: absolute;
+  bottom: 0;
+  box-shadow: 4px 0 0 0 #6b6b6b;
+}
