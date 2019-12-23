@@ -16,7 +16,7 @@
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
-
+                        <!-- name -->
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Name</label>
 
@@ -30,7 +30,7 @@
                                 @endif
                             </div>
                         </div>
-
+                        <!-- email -->
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
@@ -44,7 +44,7 @@
                                 @endif
                             </div>
                         </div>
-
+                        <!-- password -->
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label for="password" class="col-md-4 control-label">Password</label>
 
@@ -58,7 +58,7 @@
                                 @endif
                             </div>
                         </div>
-
+                        <!-- pass確認 -->
                         <div class="form-group">
                             <label for="password-confirm" class="col-md-4 control-label">Password確認</label>
 
@@ -66,14 +66,11 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
                             </div>
                         </div>
-
-                        
+                        <!-- 生年月日 -->
                         <div class="form-group{{ $errors->has('birthday') ? ' has-error' : '' }}">
                             <label for="birthday" class="col-md-4 control-label">生年月日</label>
-                            
                             <div class="col-md-6">
                                 <input id="birthday" type="date" class="form-control" name="birthday" min="1970-01-01" max="1999-12-31" value="{{ old('birthday') }}" required autofocus>
-                                
                                 @if ($errors->has('birthday'))
                                 <span class="help-block">
                                     <strong>{{ $errors->first('birthday') }}</strong>
@@ -81,22 +78,18 @@
                                 @endif
                             </div>
                         </div>
-                        
-        
-
-                                        <div class="form-group row">
-                                            <label for="bloodtype" class="col-md-4 col-form-label text-md-right">ち</label>
-
-                                            <div class="col-md-6">
-                                                <input id="bloodtype" type="text" min="1" class="form-control{{ $errors->has('bloodtype') ? ' is-invalid' : '' }}" name="bloodtype" value="{{ old('bloodtype') }}" required>
-
-                                                @if ($errors->has('age'))
-                                                    <span class="invalid-feedback">
-                                                        <strong>{{ $errors->first('age') }}</strong>
-                                                    </span>
-                                                @endif
-                                            </div>
-                                        </div>
+                        <!-- 血液型 -->
+                        <div class="form-group row">
+                            <label for="bloodtype" class="col-md-4 col-form-label text-md-right">ち</label>
+                            <div class="col-md-6">
+                                <input id="bloodtype" type="text" class="form-control{{ $errors->has('bloodtype') ? ' is-invalid' : '' }}" name="bloodtype" value="{{ old('bloodtype') }}" required>
+                                @if ($errors->has('bloodtype'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('bloodtype') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
 
 

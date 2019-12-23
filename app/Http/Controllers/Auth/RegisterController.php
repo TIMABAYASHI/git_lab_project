@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/resist2';
+    protected $redirectTo = '/plan_edit';
 
     /**
      * Create a new controller instance.
@@ -68,6 +68,11 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
             'birthday' => $data['birthday'], 
             'bloodtype' => $data['bloodtype'],
+            'q1' => $data['q1'],
+            'q2' => $data['q2'],
+            'q3' => $data['q3'],
+            'q4' => $data['q4'],
+            'q5' => $data['q5'],
         ]);
     }
 }
