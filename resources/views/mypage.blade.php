@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 <!-- マイページ -->
 <!DOCTYPE html>
 <html lang="jp">
@@ -25,11 +18,12 @@
 </head>
 
 <body>
+  @foreach
   <div class="display">
     <i class="material-icons back">
       keyboard_arrow_left
     </i>
-    <h1 class="title">さんのページ</h1>
+    <h1 class="title">{{$users->name}}さんのページ</h1>
     <h2 class="comment__p">プラン保存履歴</h2>
   <div class="search__box">
   <form action="" method="post">
@@ -72,6 +66,31 @@
         perm_identity
       </i>
     </div>
+
+<!-- 履歴表示テーブル -->
+    <!-- 現在の本 -->
+    @if (count($plans) > 0)
+    <div class="card-body"> <div class="card-title">
+    マイページ </div>
+    <div class="card-body">
+    <table class="table table-striped task-table">
+    <!-- テーブルのヘッダー -->
+    <thead> <th>プランの保存履歴</th>
+    <th>&nbsp;</th> </thead>
+    <!-- りれきのハコ -->
+    <tbody>
+    @foreach ($plans as $plan)
+    <tr>
+    <!-- りれき中身 -->
+    <td class="table-text">
+    <div> {{ $plan->name }} </div> </td>
+    <div> {{ $plan->place }} </div> </td>
+    <div> {{ $plan->photo }} </div> </td>
+    </tr>
+    @endforeach
+    </tbody> </table>
+    </div> </div>
+    @endif
 </body>
 
 </html>

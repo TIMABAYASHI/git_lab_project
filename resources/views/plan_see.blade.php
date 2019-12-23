@@ -48,7 +48,7 @@
     </div>
     <div class="plan1">
     <div class="plan1__1">
-      <input class="plan1__time__input" id="plan1_input" type="time" name="time" value="time">
+      <input class="plan__time__input" id="plan1_input" type="time" name="time" value="time">
       <input class="plan1__name" id="plan_name1"  placeholder="" value="">
       <button type="submit" id="mapButton1"><i class="material-icons search">search</i></button>
       </div>
@@ -59,7 +59,7 @@
     </div>
     <div class="plan2">
     <div class="plan2__1">
-      <input class="plan2__time__input" id="plan2_input" type="time" name="time" value="">
+      <input class="plan__time__input" id="plan2_input" type="time" name="time" value="">
       <input class="plan2__name" id="plan_name2"  placeholder="" value="">
       <button type="submit" id="mapButton2"><i class="material-icons search">search</i></button>  
     </div>  
@@ -68,7 +68,7 @@
     </div>
     <div class="plan3">
       <div class="plan3__1">
-        <input class="plan3__time__input" id="plan3_input"  type="time" name="time" value="">
+        <input class="plan__time__input" id="plan3_input"  type="time" name="time" value="">
         <input class="plan3__name" id="plan_name3" placeholder="" value="">
         <button type="submit" id="mapButton3"><i class="material-icons search">search</i></button>
       </div>
@@ -77,7 +77,7 @@
     </div>
     <div class="plan4">
       <div class="plan4__1">
-        <input class="plan4__time__input" id="plan4_input"  type="time" name="time" value="">
+        <input class="plan__time__input" id="plan4_input"  type="time" name="time" value="">
         <input class="plan4__name" id="plan_name4" placeholder="" value=""></input>
         <button type="submit" id="mapButton4"><i class="material-icons search">search</i></button>
     </div>
@@ -98,7 +98,7 @@
 自由に記述してください。-->
 <div class="plan5">
       <div class="plan5__1">
-        <input class="plan5__time__input" id="plan5_input"  type="time" name="time" value="">
+        <input class="plan__time__input" id="plan5_input"  type="time" name="time" value="">
         <input class="plan5__name" id="plan_name5" placeholder="" value=""></input>
       </div>
       <button type="submit" id="mapButton5"><i class="material-icons search">search</i></button>
@@ -109,7 +109,7 @@
 <!--// 折り畳まれ部分 -->
 </div>
   <div class="bottom">
-    <button class="plan__btn__send" type="submit" name="send">これでOK!</button>
+  <a class="plan__btn__send" type="submit" name="send" href="{{ url('/plan_post') }}">これでOK!</a>
   </div> 
       <!-- </form> -->
 

@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 
-// 2.マイページ  　　でない・・・
+// 2.マイページ 
 Route::get('/mypage', function () {
     return view('mypage');
 });
@@ -41,92 +41,49 @@ Route::get('/plan_see', function () {
     return view('plan_see');
 });
 
-// 6.編集完了『確定』後画面。SNS送信するか確認するページ　　でない・・・
+// 6.編集完了『確定』後画面。SNS送信するか確認するページ
 Route::get('/board', function () {
     return view('board');
 });
 
-// 7.心情テストQ1〜5のページ　　でない・・・
+// 7.心情テストQ1〜5のページ
 Route::get('/resist2', function () {
     return view('resist2');
 });
-
-
-
-
-
-
-
-
-
-// 7.セレクト画面
-Route::get('/select', function () {
-    return view('select');
-});
-Route::get('/select2', function () {
-    return view('select2');
-});
-Route::get('/select3', function () {
-    return view('select3');
-});
-Route::get('/select4', function () {
-    return view('select4');
-});
-Route::get('/select5', function () {
-    return view('select5');
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // ログイン周り+メインページのルート
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-
 // データベースにPOSTする
 Route::post('/q1', function (Request $request) {
-
 });
 Route::post('/q2', function (Request $request) {
-
 });
 Route::post('/q3', function (Request $request) {
-
 });
 Route::post('/q4', function (Request $request) {
-
 });
 Route::post('/q5', function (Request $request) {
-
 });
 
 
 
+use App\Type;
+use Illuminate\Http\Request;
+/**
+* 新「情報」を追加 
+*/
 
+Route::post('/types', function (Request $request) {
+// Eloquent モデル
+$types = new Type;
+$types->q6 = $request->q6;
+$types->q7 = $request->q7;
+$types->q8 = $request->q8;
+$types->q9 = $request->q9;
+$types->q10 = $request->q10;
 
+$types->save(); 
 
-
-
-
-
-
-
-// // ログイン後のルート
-
-// serect.blade.phpのデータPOSTのルート
-Route::post('hoge/form', 'HogeController@postHoge');
+});

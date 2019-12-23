@@ -24,7 +24,7 @@
                             <img id="proposal_photo" src="../img/IMG_2518.JPG" />
                         </div>
                         <p class="comment__p_1">AIがあなたに合ったプランを提案します</p>
-                        <button class="form__btn"><a href="{{ url('/reco') }}">プラン選択</a></button>
+                        <button class="form__btn"><a href="{{ url('/select') }}">プラン選択</a></button>
                         <p class="comment__p_2">過去のプラン履歴やお気に入りを確認できます</p>
                         <button class="form__btn"><a href="{{ url('/mypage') }}">Myページへ</a></button>
                         <div class="footer">

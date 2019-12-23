@@ -35,8 +35,8 @@
                 <li><i class="material-icons list--next" id="number10">looks_5</i></li>
             </ul> 
           <h1 class="title">どっちの気分？</h1>
-        <form class="form" method="post" action="{{url('types')}}">
-        <!-- {{ csrf_field() }} -->
+        <form class="form" method="POST" action="{{url('plan_edit')}}">
+        {{ csrf_field() }}
         <!--  q6 -->
           <div class="radio-tile-group" id="question6" style="visibility:visible;" >
             <div class="input-container">
