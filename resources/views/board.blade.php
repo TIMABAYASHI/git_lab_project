@@ -55,7 +55,7 @@
     <tr>
     <!-- <div class="name__table"> -->
         <td class="post__title__1" >プラン名：</td>
-        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">渋谷最先端技術体験ツアー</a></td>
+        <td class="post__title__2" name="name"><a href="{{url('plan_see')}}">渋谷最先端技術体験ツアー</a></td>
       <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
     </tr>
     <tr>
@@ -90,7 +90,7 @@
     <tr>
     <!-- <div class="name__table"> -->
         <td class="post__title__1" >プラン名：</td>
-        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">ミッキーとふれあいプラン</a></td>
+        <td class="post__title__2" name="name"><a href="{{url('plan_see')}}">ミッキーとふれあいプラン</a></td>
       <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
     </tr>
     <tr>
@@ -125,7 +125,7 @@
     <tr>
     <!-- <div class="name__table"> -->
         <td class="post__title__1" >プラン名：</td>
-        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">家族団欒ほっこりプラン</a></td>
+        <td class="post__title__2" name="name"><a href="{{url('plan_see')}}">家族団欒ほっこりプラン</a></td>
       <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
     </tr>
     <tr>
@@ -160,7 +160,7 @@
     <tr>
     <!-- <div class="name__table"> -->
         <td class="post__title__1" >プラン名：</td>
-        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">上野パンダプラン</a></td>
+        <td class="post__title__2" name="name"><a href="{{url('plan_see')}}">上野パンダプラン</a></td>
       <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
     </tr>
     <tr>
@@ -195,7 +195,7 @@
     <tr>
     <!-- <div class="name__table"> -->
         <td class="post__title__1" >プラン名：</td>
-        <td class="post__title__2" name="name"><a href="plan_edit.blade.php">自宅でまったりプラン</a></td>
+        <td class="post__title__2" name="name"><a href="{{url('plan_see')}}">自宅でまったりプラン</a></td>
       <!-- <td><input type="text" name="name" required></td> 名前の入力フォーム作成 -->
     </tr>
     <tr>
