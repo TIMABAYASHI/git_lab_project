@@ -111,7 +111,7 @@
 <!--// 折り畳まれ部分 -->
 </div>
   <div class="bottom">
-  <a class="plan__btn__send" type="submit" name="send" href="{{ url('/plan_post') }}">これでOK!</a>
+  <a class="plan__btn__send" type="submit" name="send" href="{{ url('/mypage') }}">これでOK!</a>
   <!-- <a class="plan__btn__send1" type="submit" name="send" href="{{ url('/select') }}">んーもう１回</a> -->
   </div> 
       <!-- </form> -->
