@@ -66,6 +66,31 @@
         perm_identity
       </i>
     </div>
+
+<!-- 履歴表示テーブル -->
+    <!-- 現在の本 -->
+    @if (count($plans) > 0)
+    <div class="card-body"> <div class="card-title">
+    マイページ </div>
+    <div class="card-body">
+    <table class="table table-striped task-table">
+    <!-- テーブルのヘッダー -->
+    <thead> <th>プランの保存履歴</th>
+    <th>&nbsp;</th> </thead>
+    <!-- りれきのハコ -->
+    <tbody>
+    @foreach ($plans as $plan)
+    <tr>
+    <!-- りれき中身 -->
+    <td class="table-text">
+    <div> {{ $plan->name }} </div> </td>
+    <div> {{ $plan->place }} </div> </td>
+    <div> {{ $plan->photo }} </div> </td>
+    </tr>
+    @endforeach
+    </tbody> </table>
+    </div> </div>
+    @endif
 </body>
 
 </html>
