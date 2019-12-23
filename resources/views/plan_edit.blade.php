@@ -18,9 +18,9 @@
 </head>
 
 <body>
-    <i class="material-icons back">
+    <i class="material-icons back"><a href="{{url('\plan_see')}}">
       keyboard_arrow_left
-    </i>
+    </a></i>
     <h1 class="title">プラン編集</h1>
     <div class="form-container" id="proposal_photo">
       <h2>▼ 最初にオススメするのはこちら！ ▼</h2>
