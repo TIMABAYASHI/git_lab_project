@@ -35,7 +35,7 @@
                 <li><i class="material-icons list--next" id="number10">looks_5</i></li>
             </ul> 
           <h1 class="title">どっちの気分？</h1>
-        <form class="form" method="POST" action="{{url('plan_edit')}}">
+        <form class="form" method="POST">
         {{ csrf_field() }}
         <!--  q6 -->
           <div class="radio-tile-group" id="question6" style="visibility:visible;" >
@@ -155,7 +155,7 @@
               <label for="tradition" class="radio-tile-label">伝統的</label>
             </div>
           </div>
-          <button class="form__btn form__btn--checkit" type="submit">Check it!<button>        
+          <a class="form__btn form__btn--checkit" href="{{url('plan_see')}}">Check it!</a>        
           <!-- <button class="form__btn form__btn--checkit"><a href="{{ url('/plan_see') }}">Check it!!</a><button> -->
         </div>
         

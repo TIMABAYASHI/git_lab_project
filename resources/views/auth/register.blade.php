@@ -99,7 +99,17 @@
                         <div class="form-group">
                             <label for="bloodtype" class="col-md-4 col-form-label text-md-right">血液型</label>
                             <div class="col-md-6">
-                                <input id="bloodtype" type="text" class="form-control{{ $errors->has('bloodtype') ? ' is-invalid' : '' }}" name="bloodtype" value="{{ old('bloodtype') }}" required>
+                                <!-- <input id="bloodtype" type="text" class="form-control{{ $errors->has('bloodtype') ? ' is-invalid' : '' }}" name="bloodtype" value="{{ old('bloodtype') }}" required> -->
+                                <select id="bloodtype" type="text" class="form-control{{ $errors->has('bloodtype') ? ' is-invalid' : '' }}" name="bloodtype" value="{{ old('bloodtype') }}" required>
+                                        <!-- <select class="form__input" name="bloodtype" id="">
+                                        <select class="form__input" name="bloodtype" id=""> -->
+                                    <option class="plcholder" value='' disabled selected style='display:none;'></option>
+                                    <option value="A">A型</option>
+                                    <option value="O">O型</option>
+                                    <option value="B">B型</option>
+                                    <option value="AB">AB型</option>
+                                </select>          
+
                                 @if ($errors->has('bloodtype'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('bloodtype') }}</strong>
@@ -155,7 +165,7 @@
                             <input class="q-container__input" type="radio" name="q5" id="warm" value="1">
                             <label for="warm" class="label">ハートでしょ</label>
                         </div>
-                        <button class="form__input__btn" name="send"><a href="{{url('\home')}}">Send</a></button>
+                        <button class="form__input__btn" name="send"><a href="{{url('plan_see')}}">Send</a></button>
                     </form>
                 </div>
             </div>

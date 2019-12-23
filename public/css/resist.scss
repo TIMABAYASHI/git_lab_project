@@ -72,7 +72,8 @@ body {
 
 .question {
   @extend .ask;
-  background-color: #fff;
+
+  background-color: #f5f8fa;
 }
 
 .label {
@@ -84,7 +85,7 @@ body {
   text-align: center;
   line-height: 2rem;
   cursor: pointer;
-  border: 1px solid $main-color3;
+  border: 1px solid $main-color2;
   border-radius: 2rem;
   transition: 0.3s;
   margin: 5px;
@@ -99,7 +100,7 @@ body {
 input[type="radio"] {
   display: none;
   &:checked + label {
-    background: $main-color3;
+    background: $main-color2;
     color: $base-color1;
   }
 }
