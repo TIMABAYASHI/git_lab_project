@@ -43,7 +43,7 @@ body {
     width: 100%;
     font-size: 15px;
     text-align: center;
-    margin: 6% 0 3% 0;
+    margin: 3vh 0 1vh 0;
 }
 
 .top_box {
@@ -81,7 +81,7 @@ h2 {
     color: red;
     font-size: 34px;
     text-align: center;
-    margin-top: 5%;
+    margin-top: 3vh;
     animation: blink 1.3s ease-in-out infinite alternate;
 }
 
@@ -93,7 +93,7 @@ input {
     width: 100%;
     font-size: 20px;
     text-align: center;
-    margin: 2% 0 2% 0;
+    margin: 1vh 0 1vh 0;
 }
 
 .form {
@@ -139,7 +139,7 @@ input {
 .form__btn {
     display: block;
     width: 60%;
-    height: 10%;
+    height: 6vh;
     color: $base-color1;
     background: #fff;
     text-align: center;
@@ -148,10 +148,15 @@ input {
     border: 1px solid $base-color1;
     border-radius: 1.4rem;
     transition: 0.5;
-    margin: 4% auto;
+    margin: 3vh auto;
     &:hover {
         background: $main-color2;
         border: 1px solid $main-color2;
         color: #fff;
     }
+}
+
+a {
+    text-decoration: none;
+    color: rgb(128, 128, 128);
 }

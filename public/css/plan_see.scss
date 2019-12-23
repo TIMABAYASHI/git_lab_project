@@ -125,8 +125,13 @@ cursive;
     display: flex;
 }
 
-.date {
+.plan__time__input {
     width: 20%;
+    font-size: medium;
+}
+
+.date {
+    width: 8%;
     height: 6%;
     text-align: center;
     margin: 7% 0 0 0;
