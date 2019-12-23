@@ -11,7 +11,7 @@
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .all__div {
@@ -19,6 +19,11 @@
   width: 100%;
   height: 80vh;
   overflow-y: scroll;
+}
+
+.material-icons.back {
+  font-size: 50px;
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .form-container-photo {
@@ -142,6 +147,15 @@ h3 {
   margin: 0 auto;
 }
 
+.bottom {
+  width: 100%;
+  height: 9%;
+  background-color: white;
+  display: flex;
+  position: fixed;
+  bottom: 0px;
+}
+
 .plan__btn__send {
   cursor: pointer;
   border-radius: 4em;
@@ -155,7 +169,8 @@ h3 {
   width: 40%;
   padding: 10px 40px;
   margin: 0 auto;
-  width: 55%;
+  padding: 0 auto;
+  width: 35%;
   margin: 0 20% 6% 23%;
   position: fixed;
   bottom: 0;
@@ -166,10 +181,7 @@ h3 {
   border: 1px solid #24bddc;
 }
 
-.bottom {
-  width: 100%;
-  height: 9%;
-  background-color: white;
-  position: fixed;
-  bottom: 0px;
+a {
+  text-decoration: none;
+  color: gray;
 }
