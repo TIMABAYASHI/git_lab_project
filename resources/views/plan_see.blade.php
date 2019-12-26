@@ -56,7 +56,7 @@
       </div>
       <div class="plan1__2">
       <i class="material-icons arrow">arrow_downward</i>
-      <button id="route1" onclick="toRender()">経路検索</button>
+      <button id="route1" onclick="getPlace()">経路検索</button>
       </div>
     </div>
     <div class="plan2">
@@ -66,7 +66,7 @@
       <button type="submit" id="mapButton2"><i class="material-icons search">search</i></button>  
     </div>  
       <i class="material-icons arrow">arrow_downward</i>
-      <button id="route2" onclick="toRender()">経路検索</button>
+      <button id="route2" onclick="getPlace()">経路検索</button>
     </div>
     <div class="plan3">
       <div class="plan3__1">
@@ -75,7 +75,7 @@
         <button type="submit" id="mapButton3"><i class="material-icons search">search</i></button>
       </div>
       <i class="material-icons arrow">arrow_downward</i>
-      <button id="route3" onclick="toRender()">経路検索</button>
+      <button id="route3" onclick="getPlace()">経路検索</button>
     </div>
     <div class="plan4">
       <div class="plan4__1">

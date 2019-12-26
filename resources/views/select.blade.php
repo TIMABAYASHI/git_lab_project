@@ -164,7 +164,6 @@
     </div>
   </div>
     @include('footer')
-    <div id="answer6"></div>
   
 
 <script>
